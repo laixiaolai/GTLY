@@ -1,5 +1,27 @@
-/*轮播*/
 
+/*获取非行间样式*/
+function getStyle(obj,name){
+    if(obj.currentStyle){
+        return obj.currentStyle[name];
+    }
+    else{
+        return getComputedStyle(obj,false)[name];
+    }
+}
+
+/*根据class获取元素*/
+function getByClass(oParent,sClass){
+    var aEle=oParent.getElementsByTagName('*');
+    var aResult=[];
+    for(var i=0;i<aEle.length;i++){
+        if(aEle[i].className==sClass){
+            aResult.push(aEle[i]);
+        }
+    }
+    return aResult;
+}
+
+/*轮播*/
 function PicSlide(panel,opt){
     this.panel=typeof panel=="string"?document.getElementById(panel):panel;
     for(var k in opt)this[k]=opt[k]
@@ -116,3 +138,74 @@ function startMove(obj,attr,iTarget){
         }
     },30);
 }
+
+
+/*首页大图轮播*/
+function scroll(oParent,obig,osmall,prev,next,actived){
+    var oDiv=document.getElementById(oParent);
+    var oBtnPrev=getByClass(oDiv,prev)[0];
+    var oBtnNext=getByClass(oDiv,next)[0];
+    var oSmall=getByClass(oDiv,osmall)[0];  
+    var aLiSmall=oSmall.getElementsByTagName('li');
+    var oUlBig=getByClass(oDiv,obig)[0];
+    var aLiBig=oUlBig.getElementsByTagName('li');
+    var nowZIndex=2;
+    var now=0;
+    
+    
+    //大图切换
+    for(var i=0;i<aLiSmall.length;i++){
+        aLiSmall[i].index=i;
+
+        aLiSmall[i].onmouseover=function(){
+            
+            if(this.index==now)return;
+            now=this.index;
+            tab();
+        }
+        aLiSmall[i].onmouseout=function(){
+            if(this.index!=now){
+                startMove(this,'opacity',60);
+            }
+        }
+
+    }
+
+    function tab(){
+        aLiBig[now].style.zIndex=nowZIndex++;
+
+        for(var i=0;i<aLiSmall.length;i++){
+            aLiSmall[i].className='';
+        }
+        aLiSmall[now].className=actived;
+
+        aLiBig[now].style.height=0;
+        startMove(aLiBig[now],'height',500);
+
+    }
+
+    oBtnPrev.onclick=function(){
+        now--;
+        if(now==-1){
+            now=aLiSmall.length-1;
+        }
+        tab();
+    };
+
+    oBtnNext.onclick=function(){
+        now++;
+        if(now==aLiSmall.length){
+            now=0;
+        }
+        tab();
+    };
+
+    var timer=setInterval(oBtnNext.onclick,5000);
+    oDiv.onmouseover=function(){
+        clearInterval(timer);
+    }
+    oDiv.onmouseout=function(){
+        timer=setInterval(oBtnNext.onclick,5000);
+    }
+
+};

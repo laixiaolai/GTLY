@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>注册</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css">
+	
+/* 用户 主页*/
+*{ padding: 0; margin:0; border: none;}
+.user_home{width:1200px;margin:0 auto;background: #FFF;position: relative;margin-bottom:20px;}
+.user_home_avatar{position:absolute;left: 30px;top: 160px;border:#FFF 10px solid;}
+.user_home_info{height:150px;padding-left:280px;padding-top:20px;}
+.user_home_nick a{font-weight:bold;color:#0095cd;font-size:14px;}
+.user_home_nick SPAN{padding-left:10px;}
+.user_home_desc{padding-top:10px;line-height:20px;}
+/* 用户 主页 end*//* 用户 帖子*/
+.user_thread{width:1200px;margin:0 auto;background: #FFF;background-image:url(../images/user_home_line.png);background-repeat: repeat-y;}
+.user_thread .left{float:left;width:790px;padding:30px;}
+.user_thread .left .navi{word-spacing:10px;margin-bottom:20px;}
+.user_thread .left .navi a{font-size:14px;font-weight:bold;}
+.user_thread .left .navi a.cur{font-size:14px;font-weight:bold;background:#0095cd;border-radius:2px;padding:5px 10px 5px 10px;color:#FFF;}
+.user_thread .left .list{font-size:12px;}
+.user_thread .left .list a{font-size:14px;color:#0095cd;}
+.user_thread .left .list LI{border-bottom:#dbdbdb 1px solid;padding-bottom:15px;padding-top:15px;}
+.user_thread .left .list .col_1{float:left;display: block;white-space: nowrap;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;width: 140px;padding-right:15px;}
+.user_thread .left .list .col_1 a{padding-left:10px;}
+.user_thread .left .list .col_2{float:left;display: block;white-space: nowrap;overflow: hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis;width: 430px;padding-right:25px;}
+.user_thread .left .list .col_2 a{padding-left:10px;}
+.user_thread .left .list .col_3{float:left;display: block;width: 100px;}
+.user_thread .left .list .col_4{float:left;display: block;width: 80px;color:#999;}
+.user_thread .right{float:right;width:350px;}
+.user_thread .right .visitor_title{padding:25px;font-size:14px;padding-bottom:20px;}
+.user_thread .right .visitor_list{padding-left:10px;padding-bottom:20px;}
+.user_thread .right .visitor_list LI{float:left;padding:10px 15px 10px 15px;text-align:center;}
+/* 用户 帖子 end*//* 用户 登录*/html, body{height: 100%;margin: 0;padding: 0;}
+.user_login_top{position: relative;float: right;width: 100%;text-align: center;}
+.user_login_floater{height: 50%;margin-bottom: -250px;position: relative;}
+.user_login_back{width: 450px;clear: both;padding-bottom: 10px;padding-right: 5px;position: relative;margin: 0 auto;text-align: right;}
+.user_login_back a{color: #FFF;text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);}
+#bgimg{position:absolute;z-index: -1;}
+.user_login_box{border-top: 3px #0095cd solid;height: 400px;width: 360px;clear: both;position: relative;margin: 0 auto;background-color: #fff;padding: 50px;-webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);-moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);}
+.user_login_box .title{color: #292929;height: 50px;margin-bottom: 20px;font-family:Microsoft Yahei;}
+.user_login_box .title .fl{font-size: 30px;}
+.user_login_box .title .fr{line-height: 50px;font-size: 18px;}
+.user_login_box .title .fr a{font-size: 18px;color: #FF4200;padding-left: 5px;font-family:Microsoft Yahei;}
+.user_login_box H3{font-weight: normal;font-size: 12px;}
+.user_login_box .logininput{padding-top: 20px;}
+.logininput input{display: block;height: 14px;line-height: 14px;width: 100%;border: #DAE2E5 1px solid;text-indent: 10px;overflow: hidden;color: #979696;padding-top: 13px;padding-bottom: 13px;margin-bottom: 10px;}
+.logininput input{-webkit-transition: all 0.2s ease-in;-moz-transition: all 0.2s ease-in;-o-transition: all 0.2s ease-in;transition: all 0.2s ease-in;}
+.logininput input:focus{border-color: #0095cd;}
+/* 登录按钮*/.loginbtn{border-bottom: 1px solid #ecf2f5;padding-bottom: 30px;}
+.loginsubmit input{width: 130px;height: 40px;line-height: 40px;color: #fff;background: #0095cd;display: block;text-align: center;font-size: 20px;border: none;font-family:Microsoft Yahei;cursor: pointer;}
+.loginsubmit{width: 130px;height: 40px;margin: 15px 20px 0 0;position: relative;}
+.loginbtn .logcheckbox{padding-top: 30px;}
+.loginbtn .logcheckbox input{vertical-align: middle;}
+.loginbtn .fr{padding-top: 30px;}
+/* 第三方登录*/.thirdlogin .pd50{padding-top: 30px;padding-bottom: 30px;}
+.thirdlogin h4{color: #6B6A6A;font-weight: 500;margin-bottom: 20px;}
+.thirdlogin ul li{display: block;float: left;margin-bottom: 10px;}
+.thirdlogin ul li a{display: block;float: left;height: 40px;line-height: 40px;width: 170px;color: #fff;text-indent: 60px;}
+#sinal a{background: #d63b22 url('../images/user_log_weibo.png') no-repeat 0px -5px;}
+#qql a{background: #3eb0d8 url('../images/user_log_qq.png') no-repeat 0px -5px;}
+.thirdlogin ul li{margin-right: 20px;}
+/* 用户 注册*/.user_reg_back{width: 960px;clear: both;padding-bottom: 10px;padding-right: 5px;position: relative;margin: 0 auto;text-align: right;}
+.user_reg_back a{color: #FFF;text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);}
+.user_reg_box{border-top: 3px #0095cd solid;height: 420px;width: 860px;clear: both;position: relative;margin: 0 auto;background-color: #fff;padding: 50px;-webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);-moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);}
+.user_reg_box .title{font-family: "arial", Microsoft Yahei;color: #292929;height: 50px;margin-bottom: 40px;}
+.user_reg_box .title .fl{font-size: 30px;}
+.user_reg_box .title .fr{line-height: 50px;font-size: 18px;}
+.user_reg_box .title .fr a{font-size: 18px;color: #FF4200;font-family: "arial", Microsoft Yahei;padding-left: 5px;}
+.user_reg_fl{}
+.thirdreg{float:right;text-align:left;width:170px;border-left: 1px solid #ecf2f5;padding-left:80px;height:320px;}
+.thirdreg .pd50{padding-bottom: 30px;}
+.thirdreg h4{color: #6B6A6A;font-weight: 500;margin-bottom: 20px;}
+.thirdreg ul li{display: block;float: left;margin-bottom: 10px;}
+.thirdreg ul li a{display: block;float: left;height: 40px;line-height: 40px;width: 170px;color: #fff;text-indent: 60px;}
+#sinal a{background: #d63b22 url('../images/user_log_weibo.png') no-repeat 0px -5px;}
+#qql a{background: #3eb0d8 url('../images/user_log_qq.png') no-repeat 0px -5px;}
+.thirdreg ul li{margin-right: 20px;}
+.reginput{}
+.reginput label{float: left;padding-top: 15px;text-align: right;font-size:14px;color:#999;}
+.user_reg_input_box{margin-left: 80px;}
+.reginput input{height: 14px;line-height: 14px;width: 280px;border: #DAE2E5 1px solid;text-indent: 10px;color: #979696;padding-top: 13px;padding-bottom: 13px;margin-bottom:10px;}
+.reginput input.code{width:100px;}
+.reginput input{-webkit-transition: all 0.2s ease-in;-moz-transition: all 0.2s ease-in;-o-transition: all 0.2s ease-in;transition: all 0.2s ease-in;}
+.reginput input:focus{border-color: #0095cd;}
+.regsubmit{width: 130px;height: 40px;margin: 15px 20px 0 80px;position: relative;}
+.regsubmit input{width: 130px;height: 40px;line-height: 40px;color: #fff;background: #0095cd;display: block;text-align: center;font-size: 20px;border: none;font-family: "arial", Microsoft Yahei;cursor: pointer;}
+#J_emailTip{padding: 10px 0 0 10px;}
+#J_passwordTip{padding: 10px 0 0 10px;}
+#J_repasswordTip{padding: 10px 0 0 10px;}
+#J_nickTip{padding: 10px 0 0 10px;}
+#J_logemailTip{float:right;}
+/*全屏背景*/#bg{position: fixed;top: 0;left: 0;}
+.bgwidth{width: 100%;}
+.bgheight{height: 100%;}
+/*会员帐号*/.user_center{width:1200px;margin:0 auto;}
+#umnav{height: 60px;}
+#umnav li{width: 150px;height: 60px;float: left;margin-right: 1px;}
+#umnav li a{display: block;background: #6e6f71;color: #fff;font-size: 18px;line-height: 60px;text-align: center;font-family: Microsoft Yahei, Arial;}
+#umnav li#umnactive a{background: #fff;color: #000}
+.umbody{width: 100%;height: auto;background: #fff}
+.pnitem{float: left;width: 100%;float: left;font-size: 14px;color: #757575;height: 60px;line-height: 60px;}
+.pnitem span{float: left;width: 130px;text-align: right;}
+.pnitem span font{margin-right: 15px;}
+.pnitem input, .pnitem textarea{width: 270px;height: 15px;margin-left:20px;padding-top: 12px;padding-bottom: 13px;margin-top:10px;padding-left:10px;margin-bottom: 10px;color: #383838;border: #DAE2E5 1px solid;font-size: 14px;font-family: Microsoft Yahei, Arial;float: left;-webkit-transition: all 0.2s ease-in;-moz-transition: all 0.2s ease-in;-o-transition: all 0.2s ease-in;transition: all 0.2s ease-in;}
+.pnitem input:focus, .pnitem textarea:focus{border-color: #0095cd;}
+.pnitem textarea{height: 80px;width: 400px;padding: 10px;text-indent: 0;line-height: 20px;resize: none}
+.pnline{height: 1px;width: 100%;border-bottom: #ecf2f5 1px solid;float: left;}
+.pnitem .post_check_info{position: relative;left: 0;float: left;margin-top: 10px;margin-left: 10px;}
+#pnsub{margin-left: 150px;margin-top: 30px;float: left;margin-bottom: 50px;}
+.subbtn{width: 130px;height: 40px;background: #0095cd;font-size: 22px;line-height: 34px;text-align: center;border: none;font-family: Microsoft Yahei, Arial;color: #fff}
+#J_edit_nickTip{margin-left:20px;text-align:left;}
+input.radio{width:20px;float:none;border:none;}
+.pnitem select{margin-left:20px;margin-top:20px;}
+/*图片上传*/.user_image{height:300px;padding:100px 0 0 100px;;}
+.user_image a{background-color:#0095cd;color:#FFF;padding:10px;margin-left:20px;position: relative;overflow: hidden;direction: ltr;position: relative;overflow: hidden;direction: ltr;display: inline-block;}
+/* 取回密码*/.getpw{width:1200px;margin:0 auto;border-top: 3px #0095cd solid;background-color:#FFF;}
+.getpw .getpw_step{padding:50px 50px 50px 50px;border-bottom: #dbdbdb 1px dotted;}
+.getpw .getpw_step .title{font-size:26px;font-family:'微软雅黑';font-weight:bold;color:#0095cd;float:left;padding-right:50px;}
+.getpw .getpw_step .step_wrap{float:left;}
+.step_wrap .step_1{float:left;}
+.step_wrap .step_bar{float:left;background-color:#e2e2e2;width:310px;height:10px;display:block;}
+.step_wrap .step_bar_cur{float:left;background-color:#0095cd;width:310px;height:10px;display:block;}
+.step_wrap .step_text{padding-top:25px;font-size:14px;color:#0095cd;text-align:center;}
+.getpw_main{padding:100px 20px 150px 20px;text-align:center;}
+.getpw_input_box{margin:0 auto;padding-right:83px;}
+.getpw_input_box .left{float:left;text-align:right;line-height:65px;width:420px;padding-right:20px;font-size:14px;}
+.getpw_input_box .mid{float:left;width:280px;}
+.getpw_input_box .right{float:left;text-align:left;line-height:65px;padding-left:20px;}
+.getpw_input_btn{margin:0 auto;padding-top:20px;}
+.getpw input{float:left;width: 268px;height: 15px;padding-top: 12px;padding-bottom: 13px;margin-top: 10px;padding-left: 10px;margin-bottom: 10px;color: #383838;border: #DAE2E5 1px solid;font-size: 14px;font-family: Microsoft Yahei, Arial;-webkit-transition: all 0.2s ease-in;-moz-transition: all 0.2s ease-in;-o-transition: all 0.2s ease-in;transition: all 0.2s ease-in;}
+.getpw input:focus{border-color: #0095cd;}
+.getpw .subbtn{width: 280px;height: 40px;background: #0095cd;font-size: 22px;line-height: 34px;text-align: center;border: none;font-family: Microsoft Yahei, Arial;color: #fff}
+.getpw_gotoemail{padding-bottom:50px;}
+.getpw_gotoemail a{margin:0 auto;display:block;color:#FFF;background-color:#fc640a;width:280px;height:40px;line-height:40px;font-weight:bold;}
+</style>
+</head>
+<body>
+    <img src="/static/css/images/bg_8.jpg" id="bg" class="bgwidth">
+    <div class="user_login_top">&nbsp; </div>
+    <div class="user_login_floater"></div>
+    <div class="user_reg_back"><a href="/">返回首页</a></div>
+    <div class="user_reg_box"><div class="title"><div class="fl">注册会员</div><div class="fr">已有账号<a href="/user/login">立即登录</a></div></div><div class="user_reg_fl fl"><form action="/user/register" method="post" id="J_register_form"><div class="reginput"><label class="label" for="input">邮　　箱</label><div class="user_reg_input_box"><input type="text" name="email" id="J_email"><span id="J_emailTip" class="onError">格式错误</span></div><label class="label" for="input">密　　码</label><div class="user_reg_input_box"><input type="password" name="password" id="J_password"><span id="J_passwordTip" class="onShow"> </span></div><label class="label" for="input">重复密码</label><div class="user_reg_input_box"><input type="password" name="repassword" id="J_repassword"><span id="J_repasswordTip" class="onShow"> </span></div><label class="label" for="input">昵　　称</label><div class="user_reg_input_box"><input type="text" name="nick" id="J_nick"><span id="J_nickTip" class="onShow"> </span></div><label class="label" for="input">验 证 码</label><div class="user_reg_input_box"><input type="text" name="captcha" style="width:120px;"><img style="cursor:pointer;position:relative; top:12px; left:10px;" src="/captcha/1406023896" id="J_captcha_img" class="captcha_img" alt="CAPTCHA" data-url="/captcha/js_rand"></div></div><div class="regsubmit"><input type="submit" value="注册"></div></form></div><div class="thirdreg"><div class="pd50"><h4>用第三方帐号直接注册</h4><ul><li id="sinal"><a href="/oauth/index/mod/sina" target="_blank">微博账号登陆</a></li><li id="qql" style="margin-right: 0px;"><a href="/oauth/index/mod/qq" target="_blank">QQ账号登陆</a></li><div class="clear"></div></ul><div class="clear"></div></div></div></div>
+
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script type="text/javascript">$(document).ready(function(){
+
+  //点击改变验证码
+  $('#J_captcha_img').click(function(){
+      var timenow = new Date().getTime(),
+          url = $(this).attr('data-url').replace(/js_rand/g,timenow);
+      $(this).attr("src", url);
+  });
+  //
+  $.formValidator.initConfig({formid:'J_register_form',autotip:true});
+  
+  $('#J_email').formValidator({onshow:' ',onfocus:' ', oncorrect: ' '})
+            .inputValidator({min:1,onerror:'格式错误'})
+            .regexValidator({regexp:'email',datatype:'enum',onerror:'格式错误'})
+            .ajaxValidator({
+                type: 'get',
+                url: '/user/ajax_check',
+                data: 'type=email',
+                datatype: 'json',
+                async:'false',
+                success: function(result){
+                    return result.status == '1' ? !0 : !1;
+                },
+                buttons: $('#J_regsub'),
+                onerror: '邮箱帐号已存在',
+                onwait : '等待查询'
+  });
+   
+  $('#J_nick').formValidator({onshow:' ',onfocus:' ', oncorrect: ' '})
+            .inputValidator({min:1,onerror:'格式错误'})
+             .inputValidator({max:20,onerror:'格式错误'})
+            .ajaxValidator({
+                type: 'get',
+                url: '/user/ajax_check',
+                data: 'type=nick',
+                datatype: 'json',
+                async:'false',
+                success: function(result){
+                    return result.status == '1' ? !0 : !1;
+                },
+                buttons: $('#J_regsub'),
+                onerror: '昵称已被使用',
+                onwait : '等待查询'
+  });
+      
+  $('#J_password').formValidator({onshow:' ',onfocus:'重复输入密码', oncorrect: ' '})
+            .inputValidator({min:6,onerror:'请输入6位以上密码'})
+            .inputValidator({max:20,onerror:'密码太长了'});
+      
+  $('#J_repassword').formValidator({onshow:' ',onfocus:'重复输入密码', oncorrect: ' '})
+            .inputValidator({min:1,onerror:'密码不能少于6位'})
+            .compareValidator({desid:'J_password',operateor:'=',onerror:'两次输入密码不一致'});
+  
+});
+</script>
+</body>
+</html>

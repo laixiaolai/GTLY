@@ -14,7 +14,11 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-        <script src="js/main.js"></script>
+        <script type="text/javascript">
+            window.onload=function(){
+                scroll('J_banner','slides','nd-control-nav','nd-prev','nd-next','nd-active')
+            }
+        </script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -34,7 +38,7 @@
                                 	<input type="text" name="search" class="search_inp" placeholder="搜索" /><input type="submit" value="" class="search_btn" />                	</form>
                              </li>
                             <li class="user"><a href="#" target="_blank"><img src="img/user_head.jpg" />&nbsp;钢铁老爷</a></li>
-                            <li class="icons"><a href="javascript:'" class="mob">&nbsp;</a><a href="javascript:'" class="share">&nbsp;</a><a href="javascript:'" class="cart">&nbsp;</a></li>
+                            <li class="icons"><a href="#" class="mob">&nbsp;</a><a href="#" class="share">&nbsp;</a><a href="#" class="cart">&nbsp;</a></li>
                             <li class="main_nav"><a href="#" target="_blank">首页</a><a href="#" target="_blank">逛逛</a><a href="#" target="_blank">出售</a><a href="#" target="_blank">帮助</a><a href="#" target="_blank">意见反馈</a></li>
                         </ul>
                     </div>
@@ -102,375 +106,374 @@
         <div class="content">
         	<!-- // .flexslider 首页轮播图开始 -->
         	<div class="flexslider flexslider-index" id="J_banner">
-                <ul class="slides" id="s_con">
-                    <li class="nd-active-slide"><a class="flexslider-index_item" href="#" title="最好的设计时代" target="_blank"><img src="img/53be70ad346d1.jpg" alt="最好的设计时代" draggable="false"></a></li>
-                    <li><a class="flexslider-index_item" href="#" title="夏季最畅销箱包配件 低至3折" target="_blank"><img src="img/53ba6f8a7efa3.jpg" alt="夏季最畅销箱包配件 低至3折" draggable="false"></a></li>
-                    <li><a class="flexslider-index_item" href="#" title="#BBF X JudeChan联名合作版礼盒" target="_blank"><img src="img/53bbcb253988e.jpg" alt="#BBF X JudeChan联名合作版礼盒" draggable="false"></a></li><li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; -webkit-transition: opacity 0.6s ease; transition: opacity 0.6s ease; z-index: 1;" class=""><a class="flexslider-index_item" href="#" title="【大陆首发】瑞典设计四方街 squarestreet设计产品" target="_blank"><img src="img/53b543429609b.jpg" alt="【大陆首发】瑞典设计四方街 squarestreet设计产品" draggable="false"></a></li>
-                    <li><a class="flexslider-index_item" href="#" title="夏季最畅销设计师首饰 送给夏生的你和自己" target="_blank"><img src="img/53ba704b13eb3.jpg" alt="夏季最畅销设计师首饰 送给夏生的你和自己" draggable="false"></a></li>
-                    <li><a class="flexslider-index_item" href="#" title="摩登天空Modern Sky Lab T恤" target="_blank"><img src="http://img1.nuandaocdn.com/Public/images/uploads/focuspic/20140710/53be5fa10da1d.jpg" alt="摩登天空Modern Sky Lab T恤" draggable="false"></a></li>
-                </ul>
-                <ol id="s_con_nav" class="nd-control-nav nd-control-paging"><li class="nd-active"><a href="javascript:;" class="">1</a></li><li><a href="javascript:;" class="">2</a></li><li><a href="javascript:;" class="">3</a></li><li><a href="javascript:;" class="">4</a></li><li><a href="javascript:;">5</a></li><li><a href="javascript:;" class="">6</a></li></ol>
-                <ul class="nd-direction-nav"><li><a class="nd-prev" href="#">Previous</a></li><li><a class="nd-next" href="#">Next</a></li></ul>
-            </div>
-            <script type="text/javascript">
-                var s=new PicSlide("s_con");
-            </script>
-            <!-- // .flexslider 首页轮播图结束 -->
-            
-            
-            
-            <!-- //  首页5个东东开始 -->
-            <div class="hAdv02">
-                <div class="item1" style="top:0px;left:0px;">
-                  <a href="http://www.iliangcang.com/i/topic/20140515" target="_blank"><img src="img/1466.jpg" title=""></a>
-                </div>
-                <div class="item2">
-                  <a href="http://www.iliangcang.com/i/topic/201406304329" target="_blank"><img src="img/1468.jpg" title=""></a>
-                </div>
-                <div class="item1" style="top:0px;right:0px;">
-                  <a href="http://www.iliangcang.com/i/brand/own/?id=3" target="_blank"><img src="img/1469.jpg" title=""></a>
-                </div>
-                <div class="item1" style="bottom:0px;left:0px;">
-                  <a href="http://www.iliangcang.com/i/brand/intro/?id=54" target="_blank"><img src="img/1467.jpg" title=""></a>
-                </div>
-                <div class="item1" style="bottom:0px;right:0px;">
-                  <a href="http://www.iliangcang.com/i/brand/own/?id=63" target="_blank"><img src="img/1470.jpg" title=""></a> 
-                </div>
-	      	</div>
-            <!-- //  首页5个东东结束 -->
-            <!-- //  首页分类开始 -->
-            <div class="index_new_navi">
-                <div class="nai_one_tit"><a class="nai_on" title="潮我来">潮我来</a><a href="http://www.1626.com/index/c-1.html" title="最热潮物">最热潮物</a><a href="http://www.1626.com/index/c-2.html" title="最新推荐">最新推荐</a><a href="http://www.1626.com/index/c-3.html" title="朋友发布">朋友发布</a><a class="shoe" target="_blank" href="http://www.1626.com/zixun/cat-16.html">潮鞋</a><a class="shoe" target="_blank" href="http://www.1626.com/zixun/cat-1005.html">视频</a><a class="gifts" target="_blank" href="/zixun/206209.html">别跳楼了！十款跑路鞋款推荐</a> </div>  <div class="nai_two_div">
-                <div class="naitwo_time"><div class="time_list" style="display:block;"></div></div>    <!--左边时间分类结束-->
-                
-                <div class="naitwo_cal"> 
-                 <div class="cat_class">价格<a class="name_li"></a><div class="cal_ul" style="display: none;"><a href="http://www.1626.com/index">不限</a><a href="http://www.1626.com/index/price-1.html">0-200</a><a href="http://www.1626.com/index/price-2.html">200-500</a><a href="http://www.1626.com/index/price-3.html">500-1000</a><a href="http://www.1626.com/index/price-4.html">1000以上</a><div class="clear"></div></div></div><div class="cat_class">风格<a class="name_li"></a><div class="cal_ul" style="display: none;"><a href="http://www.1626.com/index">不限</a><a href="http://www.1626.com/index/style-hiphop.html">hiphop</a><a href="http://www.1626.com/index/style-%E6%9C%8B%E5%85%8B.html">朋克</a><a href="http://www.1626.com/index/style-%E6%B3%A2%E6%99%AE.html">波普</a><a href="http://www.1626.com/index/style-%E9%BB%91%E6%9A%97.html">黑暗</a><a href="http://www.1626.com/index/style-%E5%AD%A6%E9%99%A2.html">学院</a><a href="http://www.1626.com/index/style-%E8%A1%97%E5%A4%B4.html">街头</a><a href="http://www.1626.com/index/style-%E5%86%9B%E4%BA%8B.html">军事</a><a href="http://www.1626.com/index/style-%E7%A7%91%E5%B9%BB.html">科幻</a><a href="http://www.1626.com/index/style-%E6%9C%AA%E6%9D%A5.html">未来</a><a href="http://www.1626.com/index/style-%E5%A4%8D%E5%8F%A4.html">复古</a><a href="http://www.1626.com/index/style-%E4%B8%AD%E6%80%A7.html">中性</a><a href="http://www.1626.com/index/style-%E6%96%87%E8%89%BA.html">文艺</a><a href="http://www.1626.com/index/style-%E6%B0%91%E6%97%8F.html">民族</a><a href="http://www.1626.com/index/style-%E6%AC%A7%E7%BE%8E.html">欧美</a><a href="http://www.1626.com/index/style-%E8%8B%B1%E4%BC%A6.html">英伦</a><a href="http://www.1626.com/index/style-%E6%97%A5%E9%9F%A9.html">日韩</a><a href="http://www.1626.com/index/style-%E5%8E%9F%E5%AE%BF.html">原宿</a><a href="http://www.1626.com/index/style-%E7%94%9C%E7%BE%8E.html">甜美</a><a href="http://www.1626.com/index/style-%E5%8F%AF%E7%88%B1.html">可爱</a><a href="http://www.1626.com/index/style-%E7%94%B0%E5%9B%AD.html">田园</a><a href="http://www.1626.com/index/style-%E7%8E%B0%E4%BB%A3.html">现代</a><a href="http://www.1626.com/index/style-%E4%BC%91%E9%97%B2.html">休闲</a><a href="http://www.1626.com/index/style-%E8%BF%90%E5%8A%A8.html">运动</a><a href="http://www.1626.com/index/style-%E6%88%B7%E5%A4%96.html">户外</a><a href="http://www.1626.com/index/style-%E5%8D%B0%E7%AC%AC%E5%AE%89.html">印第安</a><a href="http://www.1626.com/index/style-%E5%B0%8F%E6%B8%85%E6%96%B0.html">小清新</a><a href="http://www.1626.com/index/style-%E6%B3%A2%E8%A5%BF%E7%B1%B3%E4%BA%9A.html">波西米亚</a><div class="clear"></div></div></div><div class="cat_class">颜色<a class="name_li"></a><div class="cal_ul color_ys" style="display: none;"><a href="http://www.1626.com/index">不限</a><a class="color_a" href="http://www.1626.com/index/color-%E9%BB%91%E8%89%B2.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/heise.jpg" width="18" height="18"><span>黑色</span></a><a class="color_a" href="http://www.1626.com/index/color-%E7%99%BD%E8%89%B2.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/baise.jpg" width="18" height="18"><span>白色</span></a><a class="color_a" href="http://www.1626.com/index/color-%E7%81%B0%E8%89%B2.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/huise.jpg" width="18" height="18"><span>灰色</span></a><a class="color_a" href="http://www.1626.com/index/color-%E5%A4%9A%E8%89%B2.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/caise.jpg" width="18" height="18"><span>多色</span></a><a class="color_a" href="http://www.1626.com/index/color-%E7%B1%B3%E8%89%B2.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/mise.jpg" width="18" height="18"><span>米色</span></a><a class="color_a" href="http://www.1626.com/index/color-%E6%9D%8F%E8%89%B2.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/xingse.jpg" width="18" height="18"><span>杏色</span></a><a class="color_a" href="http://www.1626.com/index/color-%E6%A9%99%E8%89%B2.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/chengse.jpg" width="18" height="18"><span>橙色</span></a><a class="color_a" href="http://www.1626.com/index/color-%E7%B4%AB%E8%89%B2.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/zise.jpg" width="18" height="18"><span>紫色</span></a><a class="color_a" href="http://www.1626.com/index/color-%E7%BB%BF%E8%89%B2.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/lvse.jpg" width="18" height="18"><span>绿色</span></a><a class="color_a" href="http://www.1626.com/index/color-%E5%86%9B%E7%BB%BF%E8%89%B2.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/junlvse.jpg" width="18" height="18"><span>军绿色</span></a><a class="color_a" href="http://www.1626.com/index/color-%E6%A3%95%E8%89%B2.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/zongse.jpg" width="18" height="18"><span>棕色</span></a><a class="color_a" href="http://www.1626.com/index/color-%E9%BB%84%E8%89%B2.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/huangse.jpg" width="18" height="18"><span>黄色</span></a><a class="color_a" href="http://www.1626.com/index/color-%E9%87%91%E8%89%B2.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/jinse.jpg" width="18" height="18"><span>金色</span></a><a class="color_a" href="http://www.1626.com/index/color-%E9%93%B6%E8%89%B2.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/yinse.jpg" width="18" height="18"><span>银色</span></a><a class="color_a" href="http://www.1626.com/index/color-%E8%93%9D%E8%89%B2.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/lanse.jpg" width="18" height="18"><span>蓝色</span></a><a class="color_a" href="http://www.1626.com/index/color-%E7%89%9B%E4%BB%94%E8%93%9D.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/niuzailan.jpg" width="18" height="18"><span>牛仔蓝</span></a><a class="color_a" href="http://www.1626.com/index/color-%E7%BA%A2%E8%89%B2.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/hongse.jpg" width="18" height="18"><span>红色</span></a><a class="color_a" href="http://www.1626.com/index/color-%E7%B2%89%E7%BA%A2%E8%89%B2.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/fenhongse.jpg" width="18" height="18"><span>粉红色</span></a><a class="color_a" href="http://www.1626.com/index/color-%E7%8E%AB%E7%BA%A2%E8%89%B2.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/meihongse.jpg" width="18" height="18"><span>玫红色</span></a><a class="color_a" href="http://www.1626.com/index/color-%E5%92%96%E5%95%A1%E8%89%B2.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/kafeise.jpg" width="18" height="18"><span>咖啡色</span></a><a class="color_a" href="http://www.1626.com/index/color-%E5%8D%A1%E5%85%B6%E8%89%B2.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/kaqise.jpg" width="18" height="18"><span>卡其色</span></a><a class="color_a" href="http://www.1626.com/index/color-%E8%8D%A7%E5%85%89%E8%89%B2.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/yingguangse.jpg" width="18" height="18"><span>荧光色</span></a><a class="color_a" href="http://www.1626.com/index/color-%E5%8E%9F%E6%9C%A8%E8%89%B2.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/yuanmuse.jpg" width="18" height="18"><span>原木色</span></a><a class="color_a" href="http://www.1626.com/index/color-%E7%94%B5%E9%95%80%E8%89%B2.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/dianduse.jpg" width="18" height="18"><span>电镀色</span></a><a class="color_a" href="http://www.1626.com/index/color-%E5%8D%B0%E8%8A%B1.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/yinhua.jpg" width="18" height="18"><span>印花</span></a><a class="color_a" href="http://www.1626.com/index/color-%E7%A2%8E%E8%8A%B1.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/suihua.jpg" width="18" height="18"><span>碎花</span></a><a class="color_a" href="http://www.1626.com/index/color-%E9%80%8F%E6%98%8E.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/touming.jpg" width="18" height="18"><span>透明</span></a><a class="color_a" href="http://www.1626.com/index/color-%E6%9D%A1%E7%BA%B9.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/tiaowen.jpg" width="18" height="18"><span>条纹</span></a><a class="color_a" href="http://www.1626.com/index/color-%E6%B3%A2%E7%82%B9.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/bodian.jpg" width="18" height="18"><span>波点</span></a><a class="color_a" href="http://www.1626.com/index/color-%E6%A0%BC%E5%AD%90.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/gezi.jpg" width="18" height="18"><span>格子</span></a><a class="color_a" href="http://www.1626.com/index/color-%E8%BF%B7%E5%BD%A9.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/micai.jpg" width="18" height="18"><span>迷彩</span></a><a class="color_a" href="http://www.1626.com/index/color-%E8%9B%87%E7%BA%B9.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/shewen.jpg" width="18" height="18"><span>蛇纹</span></a><a class="color_a" href="http://www.1626.com/index/color-%E8%B1%B9%E7%BA%B9.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/baowen.jpg" width="18" height="18"><span>豹纹</span></a><a class="color_a" href="http://www.1626.com/index/color-%E6%96%91%E9%A9%AC%E7%BA%B9.html"><img src="http://cdn1626.u.qiniudn.com/public/upload/colorpic_tag/banmawen.jpg" width="18" height="18"><span>斑马纹</span></a><div class="clear"></div></div></div><div class="cat_class">品类<a class="name_li"></a><div class="cal_ul" style="display: none;"><a href="http://www.1626.com/index">不限</a><a href="http://www.1626.com/index/hot-1.html">男装</a><a href="http://www.1626.com/index/hot-2.html">女装</a><a href="http://www.1626.com/index/hot-3.html">男鞋</a><a href="http://www.1626.com/index/hot-4.html">女鞋</a><a href="http://www.1626.com/index/hot-5.html">箱包</a><a href="http://www.1626.com/index/hot-6.html">配饰</a><a href="http://www.1626.com/index/hot-7.html">数码</a><a href="http://www.1626.com/index/hot-8.html">设计</a><a href="http://www.1626.com/index/hot-9.html">玩具</a><a href="http://www.1626.com/index/hot-10.html">滑板单车</a><a href="http://www.1626.com/index/hot-11.html">其他</a><div class="clear"></div></div></div><b>选择分类：</b>
-                </div>
-                <div class="ftm_div">
-                <div class="cho-ms"><a href="http://www.1626.com/indexthree" class="hi_three_index current_item_three" hidefocus="true"></a></div><div class="cho-ms"><a href="http://www.1626.com/index" class="hi_two_index " hidefocus="true"></a></div><div class="cho-ms"><a href="http://www.1626.com/indexone" class="hi_one_index " hidefocus="true"></a></div>    </div>
-                
-                </div>
-                <span class="clear"></span>
-                </div>
-            <!-- //  首页5个东东结束 -->
-            <!-- //  首页单品瀑布流开始 -->
-            <div id="body_wrap">
-                <div id="hi_three_index">
-                    <div class="hi_three_div">
-                        <div class="htd_pic">
-                        <a class="img-t" href="http://www.1626.com/note/3352907.html" title="熏若原创设计2013麂皮绒数码印花绿色人像手工手拎包" target="_blank"><img src="img/1138c27315e23d1abf6c1fda716830b5izE9It_310x310.jpg" alt="熏若原创设计2013麂皮绒数码印花绿色人像手工手拎包" onerror="insteadof_img(this," http:="" cdn1626.u.qiniudn.com="" public="" upload="" share="" 000="" 033="" 529="" 07="" 2af45334391e99d093dd941ae07f9e4cdq58wa.jpg",310);"=""></a>
-                        <a class="action_bg" href="http://www.1626.com/note/3352907.html" title="熏若原创设计2013麂皮绒数码印花绿色人像手工手拎包" target="_blank"></a>
-                        <div class="action_content">
-                        <div class="action_collect"><a class="like_sum_icon"></a><span class="like_sum_data">17</span><div class="clear"></div></div>
-                        <div class="clear"></div>
-                        </div>
-                        <a href="javascript:void(0)" hidefocus="true" st="unlike" class="hi_v2like js_like_icon_three" onclick="$.Fav_Share_hua(3352907,this);"></a>
-                        </div>
-                        <div class="htd_info">
-                        <a href="http://www.1626.com/note/3352907.html" title="熏若原创设计2013麂皮绒数码印花绿色人像手工手拎包" target="_blank" class="title">熏若原创设计2013麂皮绒数码印花...</a>
-                        <div class="user_price">
-                        <div class="user_info">
-                            <a href="http://www.1626.com/u/9414.html" target="_blank" title="暖岛精选" class="user_pic"><img src="img/38_1392851796_middle.jpg" alt="暖岛精选" width="25" height="25"></a>
-                        <span class="time"><a href="http://www.1626.com/u/9414.html" title="暖岛精选" target="_blank">暖岛精选</a></span>
-                        <div class="clear"></div>
-                        </div>
-                        <div class="price_info">
-                        <span class="price_data">170.00</span><a class="price_icon"></a><div class="clear"></div>
-                        </div>
-                        <div class="clear"></div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="hi_three_div">
-                    <div class="htd_pic">
-                    <a class="img-t" href="http://www.1626.com/note/3352622.html" title="鸢尾-九口山X呼吸不能说 梵花系列 原创设计笔记本" target="_blank"><img src="img/1b0a5b8fde87428e34d1f4ad99ca6f76yg5d2z_310x310.jpg" alt="鸢尾-九口山X呼吸不能说 梵花系列 原创设计笔记本" onerror="insteadof_img(this," http:="" cdn1626.u.qiniudn.com="" public="" upload="" share="" 000="" 033="" 526="" 22="" 0359d0806b1b01f59c620cb612b8908bljnnus.jpg",310);"=""></a>
-                    <a class="action_bg" href="http://www.1626.com/note/3352622.html" title="鸢尾-九口山X呼吸不能说 梵花系列 原创设计笔记本" target="_blank"></a>
-                    <div class="action_content">
-                    <div class="action_collect"><a class="like_sum_icon"></a><span class="like_sum_data">16</span><div class="clear"></div></div>
-                    <div class="clear"></div>
-                    </div>
-                    <a href="javascript:void(0)" hidefocus="true" st="unlike" class="hi_v2like js_like_icon_three" onclick="$.Fav_Share_hua(3352622,this);"></a>
-                    </div>
-                    <div class="htd_info">
-                    <a href="http://www.1626.com/note/3352622.html" title="鸢尾-九口山X呼吸不能说 梵花系列 原创设计笔记本" target="_blank" class="title">鸢尾-九口山X呼吸不能说 梵花系...</a>
-                    <div class="user_price">
-                    <div class="user_info">
-                        <a href="http://www.1626.com/u/159160.html" target="_blank" title="April_Lee" class="user_pic"><img src="img/38_1392851796_middle.jpg" alt="April_Lee" width="25" height="25"></a>
-                    <span class="time"><a href="http://www.1626.com/u/159160.html" title="April_Lee" target="_blank">April_Lee</a></span>
-                    <div class="clear"></div>
-                    </div>
-                    <div class="price_info">
-                    <span class="price_data">120.00</span><a class="price_icon"></a><div class="clear"></div>
-                    </div>
-                    <div class="clear"></div>
-                    </div>
-                    </div>
-                    </div>
-                    <div class="hi_three_div">
-                    <div class="htd_pic">
-                    <a class="img-t" href="http://www.1626.com/note/3352622.html" title="鸢尾-九口山X呼吸不能说 梵花系列 原创设计笔记本" target="_blank"><img src="img/2a666dcb229b9be934f315719682c4bfWGNGg6_310x310.jpg" alt="鸢尾-九口山X呼吸不能说 梵花系列 原创设计笔记本" onerror="insteadof_img(this," http:="" cdn1626.u.qiniudn.com="" public="" upload="" share="" 000="" 033="" 526="" 22="" 0359d0806b1b01f59c620cb612b8908bljnnus.jpg",310);"=""></a>
-                    <a class="action_bg" href="http://www.1626.com/note/3352622.html" title="鸢尾-九口山X呼吸不能说 梵花系列 原创设计笔记本" target="_blank"></a>
-                    <div class="action_content">
-                    <div class="action_collect"><a class="like_sum_icon"></a><span class="like_sum_data">16</span><div class="clear"></div></div>
-                    <div class="clear"></div>
-                    </div>
-                    <a href="javascript:void(0)" hidefocus="true" st="unlike" class="hi_v2like js_like_icon_three" onclick="$.Fav_Share_hua(3352622,this);"></a>
-                    </div>
-                    <div class="htd_info">
-                    <a href="http://www.1626.com/note/3352622.html" title="鸢尾-九口山X呼吸不能说 梵花系列 原创设计笔记本" target="_blank" class="title">鸢尾-九口山X呼吸不能说 梵花系...</a>
-                    <div class="user_price">
-                    <div class="user_info">
-                        <a href="http://www.1626.com/u/159160.html" target="_blank" title="April_Lee" class="user_pic"><img src="img/38_1392851796_middle.jpg" alt="April_Lee" width="25" height="25"></a>
-                    <span class="time"><a href="http://www.1626.com/u/159160.html" title="April_Lee" target="_blank">April_Lee</a></span>
-                    <div class="clear"></div>
-                    </div>
-                    <div class="price_info">
-                    <span class="price_data">120.00</span><a class="price_icon"></a><div class="clear"></div>
-                    </div>
-                    <div class="clear"></div>
-                    </div>
-                    </div>
-                    </div>
-                    <div class="hi_three_div">
-                    <div class="htd_pic">
-                    <a class="img-t" href="http://www.1626.com/note/3352622.html" title="鸢尾-九口山X呼吸不能说 梵花系列 原创设计笔记本" target="_blank"><img src="img/11d0948ef2edfd09bc05617f2e13c4060g2pr6_310x310.jpg" alt="鸢尾-九口山X呼吸不能说 梵花系列 原创设计笔记本" onerror="insteadof_img(this," http:="" cdn1626.u.qiniudn.com="" public="" upload="" share="" 000="" 033="" 526="" 22="" 0359d0806b1b01f59c620cb612b8908bljnnus.jpg",310);"=""></a>
-                    <a class="action_bg" href="http://www.1626.com/note/3352622.html" title="鸢尾-九口山X呼吸不能说 梵花系列 原创设计笔记本" target="_blank"></a>
-                    <div class="action_content">
-                    <div class="action_collect"><a class="like_sum_icon"></a><span class="like_sum_data">16</span><div class="clear"></div></div>
-                    <div class="clear"></div>
-                    </div>
-                    <a href="javascript:void(0)" hidefocus="true" st="unlike" class="hi_v2like js_like_icon_three" onclick="$.Fav_Share_hua(3352622,this);"></a>
-                    </div>
-                    <div class="htd_info">
-                    <a href="http://www.1626.com/note/3352622.html" title="鸢尾-九口山X呼吸不能说 梵花系列 原创设计笔记本" target="_blank" class="title">鸢尾-九口山X呼吸不能说 梵花系...</a>
-                    <div class="user_price">
-                    <div class="user_info">
-                        <a href="http://www.1626.com/u/159160.html" target="_blank" title="April_Lee" class="user_pic"><img src="img/38_1392851796_middle.jpg" alt="April_Lee" width="25" height="25"></a>
-                    <span class="time"><a href="http://www.1626.com/u/159160.html" title="April_Lee" target="_blank">April_Lee</a></span>
-                    <div class="clear"></div>
-                    </div>
-                    <div class="price_info">
-                    <span class="price_data">120.00</span><a class="price_icon"></a><div class="clear"></div>
-                    </div>
-                    <div class="clear"></div>
-                    </div>
-                    </div>
-                    </div>
-                    <div class="hi_three_div">
-                    <div class="htd_pic">
-                    <a class="img-t" href="http://www.1626.com/note/3350933.html" title="【G表弟】G-SHOCK 310系列  冰魔" target="_blank"><img src="img/171a28313eb36fba54ab9e2eafa0ec3bANa858_310x310.jpg" alt="【G表弟】G-SHOCK 310系列  冰魔" onerror="insteadof_img(this," http:="" cdn1626.u.qiniudn.com="" public="" upload="" share="" 000="" 033="" 509="" 33="" 1138c27315e23d1abf6c1fda716830b5ize9it.jpg",310);"=""></a>
-                    <a class="action_bg" href="http://www.1626.com/note/3350933.html" title="【G表弟】G-SHOCK 310系列  冰魔" target="_blank"></a>
-                    <div class="action_content">
-                    <div class="action_collect"><a class="like_sum_icon"></a><span class="like_sum_data">84</span><div class="clear"></div></div>
-                    <div class="clear"></div>
-                    </div>
-                    <a href="javascript:void(0)" hidefocus="true" st="unlike" class="hi_v2like js_like_icon_three" onclick="$.Fav_Share_hua(3350933,this);"></a>
-                    </div>
-                    <div class="htd_info">
-                    <a href="http://www.1626.com/note/3350933.html" title="【G表弟】G-SHOCK 310系列  冰魔" target="_blank" class="title">【G表弟】G-SHOCK 310系列  冰魔</a>
-                    <div class="user_price">
-                    <div class="user_info">
-                        <a href="http://www.1626.com/u/63883.html" target="_blank" title="不明真像的路人" class="user_pic"><img src="img/38_1392851796_middle.jpg" alt="不明真像的路人" width="25" height="25"></a>
-                    <span class="time"><a href="http://www.1626.com/u/63883.html" title="不明真像的路人" target="_blank">不明真像的路人</a></span>
-                    <div class="clear"></div>
-                    </div>
-                    <div class="price_info">
-                    <span class="price_data">998.00</span><a class="price_icon"></a><div class="clear"></div>
-                    </div>
-                    <div class="clear"></div>
-                    </div>
-                    </div>
-                    </div>
-                    <div class="hi_three_div">
-                    <div class="htd_pic">
-                    <a class="img-t" href="http://www.1626.com/note/3358365.html" title="Loco 5-panel snapback系列 “行云流水”" target="_blank"><img src="img/698e2e684a8e500035709d2198aaaa02JW4Zjz_310x310.jpg" alt="Loco 5-panel snapback系列 “行云流水”" onerror="insteadof_img(this," http:="" cdn1626.u.qiniudn.com="" public="" upload="" share="" 000="" 033="" 583="" 65="" 5e3d7178a57b50cc8026ac7ccc03d7683aiaux.jpg",310);"=""></a>
-                    <a class="action_bg" href="http://www.1626.com/note/3358365.html" title="Loco 5-panel snapback系列 “行云流水”" target="_blank"></a>
-                    <div class="action_content">
-                    <div class="action_collect"><a class="like_sum_icon"></a><span class="like_sum_data">17</span><div class="clear"></div></div>
-                    <div class="clear"></div>
-                    </div>
-                    <a href="javascript:void(0)" hidefocus="true" st="unlike" class="hi_v2like js_like_icon_three" onclick="$.Fav_Share_hua(3358365,this);"></a>
-                    </div>
-                    <div class="htd_info">
-                    <a href="http://www.1626.com/note/3358365.html" title="Loco 5-panel snapback系列 “行云流水”" target="_blank" class="title">Loco 5-panel snapback系列 “行...</a>
-                    <div class="user_price">
-                    <div class="user_info">
-                        <a href="http://www.1626.com/u/26160.html" target="_blank" title="Locoshanghai" class="user_pic"><img src="img/38_1392851796_middle.jpg" alt="Locoshanghai" width="25" height="25"></a>
-                    <span class="time"><a href="http://www.1626.com/u/26160.html" title="Locoshanghai" target="_blank">Locoshanghai</a></span>
-                    <div class="clear"></div>
-                    </div>
-                    <div class="price_info">
-                    <span class="price_data">128.00</span><a class="price_icon"></a><div class="clear"></div>
-                    </div>
-                    <div class="clear"></div>
-                    </div>
-                    </div>
-                    </div>
-                    <span class="clear"></span>
-                	<div class="m_goods" id="js_loading">正在加载更多…</div>
-                </div>
-                <!--分页-->
-                <div class="page-content">
-                    <a href="javascript:void(0);" class="fl nomore">上一页<i class="iup"></i></a>
-                    <a href="http://www.1626.com/indexthree/p-2.html" class="fr ">下一页<i></i></a>
-                    <span class="clear"></span>
-                </div>
-			</div>
-            <!-- //  首页单品瀑布流结束 -->
-            <!-- //  首页每日新品开始 -->
-            <div id="salesontop" class="sale-box content current">
-                <div class="index-subtitle">
-                    <div class="clearfix">
-                        <div class="subtitle-tip"></div>
-                        <div class="subtitle-content subtitle-dailynew">
-                            <h4>每日新品</h4><span class="subtitle-fltip">野糖每天推出9款新品，不要错过哦~</span><span class="subtitle-frtip"><a href="/trends?sales=1" target="_blank">查看全部 →</a></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="clearfix today-saleV2">
-                    <div class="clearfix mgl10n">
-                        <div class="boxes sV2-timebox">
-                            <h1>每日新品</h1>
-                            <h2>07月12日</h2>
-                            <h3>星期六</h3>
-                            <p class="tr blue">
-                                <!--a target="_blank" href="/sale/1771" title="BANH 世界杯系列T恤">进去看看</a--><strong> <a href="/trends?sales=1" target="_blank">查看全部 →</a></strong>
-                            </p>
-                        </div>
-                        <div class="saleV2 boxes">
-                            <a target="_blank" href="/sale/1771" title="BANH 世界杯系列T恤">
-                                <img data-original="http://img1.yetang.com/Public/images/uploads/sale/20140711/53bf986279b89.jpg" src="img/53bf986279b89.jpg" style="display: inline;"><span class="saleV2-title"><span class="sV2-t1 ellipsis">热血世界杯</span><span class="sV2-t2 ellipsis">BANH 世界杯系列T恤→</span><span class="sale-price">￥59</span></span>
-                            </a>
-                        </div>
-                        <div class="boxes buying-tipV2">
-                            <div class="flex-viewport" style="overflow: hidden; position: relative;">
-                                <ul class="slides" style="width: 1200%; -webkit-transition: 0.6s; transition: 0.6s; -webkit-transform: translate3d(-717px, 0px, 0px);">
-                                    <li class="clone" style="width: 239px; float: left; display: block;">
-                                        <div class="relative">
-                                            <a href="/item/12077" target="_blank">
-                                                <img src="img/52dcf49f9c3dc-250.jpg" height="295px"><span class="saleV2-title"><p class="pdt5 lh18 pdl10 pdr10 ellipsis"><strong class="blue">13人</strong>购买了<br><strong class="blue">小茶の语 手采薄荷凉叶养肤水</strong></p></span>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li class="" style="width: 239px; float: left; display: block;">
-                                        <div class="relative">
-                                            <a href="/item/12073" target="_blank">
-                                                <img src="img/53869751811e6-250.jpg" height="295px"><span class="saleV2-title"><p class="pdt5 lh18 pdl10 pdr10 ellipsis"><strong class="blue">13人</strong>购买了<br><strong class="blue">小茶の语 便携迷你款无火小香包</strong></p></span>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li style="width: 239px; float: left; display: block;" class="flex-active-slide">
-                                        <div class="relative">
-                                            <a href="/item/11789" target="_blank">
-                                                <img src="img/53a95a7d77774-250.jpg" height="295px"><span class="saleV2-title"><p class="pdt5 lh18 pdl10 pdr10 ellipsis"><strong class="blue">4人</strong>购买了<br><strong class="blue">小茶の语 芦荟接骨木紧致补水眼霜</strong></p></span>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li style="width: 239px; float: left; display: block;" class="">
-                                        <div class="relative">
-                                            <a href="/item/13070" target="_blank">
-                                                <img src="img/534919ce53bca-250.jpg" height="295px"><span class="saleV2-title"><p class="pdt5 lh18 pdl10 pdr10 ellipsis"><strong class="blue">232人</strong>喜欢了<br><strong class="blue">PATOO怕痛 原创纹身贴（吃货表&透明表组合）</strong></p></span>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li style="width: 239px; float: left; display: block;" class="">
-                                        <div class="relative">
-                                            <a href="/item/12077" target="_blank">
-                                                <img src="img/52dcf49f9c3dc-250.jpg" height="295px"><span class="saleV2-title"><p class="pdt5 lh18 pdl10 pdr10 ellipsis"><strong class="blue">13人</strong>购买了<br><strong class="blue">小茶の语 手采薄荷凉叶养肤水</strong></p></span>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li class="clone" style="width: 239px; float: left; display: block;">
-                                        <div class="relative">
-                                            <a href="/item/12073" target="_blank">
-                                                <img src="img/53869751811e6-250.jpg" height="295px"><span class="saleV2-title"><p class="pdt5 lh18 pdl10 pdr10 ellipsis"><strong class="blue">13人</strong>购买了<br><strong class="blue">小茶の语 便携迷你款无火小香包</strong></p></span>
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <ul class="flex-direction-nav">
-                                <li><a class="flex-prev" href="#">Previous</a>
-                                </li>
-                                <li><a class="flex-next" href="#">Next</a>
-                                </li>
+                            <ul class="slides">
+                                <li style="z-index: 1;"><a class="flexslider-index_item" href="#" title="最好的设计时代" target="_blank"><img src="img/53be70ad346d1.jpg" alt="最好的设计时代"></a></li>
+                                <li><a class="flexslider-index_item" href="#" title="夏季最畅销箱包配件 低至3折" target="_blank"><img src="img/53ba6f8a7efa3.jpg" alt="夏季最畅销箱包配件 低至3折"></a></li>
+                                <li><a class="flexslider-index_item" href="#" title="#BBF X JudeChan联名合作版礼盒" target="_blank"><img src="img/53bbcb253988e.jpg" alt="#BBF X JudeChan联名合作版礼盒"></a></li>
+                                <li><a class="flexslider-index_item" href="#" title="【大陆首发】瑞典设计四方街 squarestreet设计产品" target="_blank"><img src="img/53b543429609b.jpg" alt="【大陆首发】瑞典设计四方街 squarestreet设计产品"></a></li>
+                                <li><a class="flexslider-index_item" href="#" title="夏季最畅销设计师首饰 送给夏生的你和自己" target="_blank"><img src="img/53ba704b13eb3.jpg" alt="夏季最畅销设计师首饰 送给夏生的你和自己"></a></li>
+                                <li><a class="flexslider-index_item" href="#" title="摩登天空Modern Sky Lab T恤" target="_blank"><img src="http://img1.nuandaocdn.com/Public/images/uploads/focuspic/20140710/53be5fa10da1d.jpg" alt="摩登天空Modern Sky Lab T恤"></a></li>
                             </ul>
+                            <ol class="nd-control-nav"><li class="nd-active"><a href="#" class="">1</a></li><li><a href="#" class="">2</a></li><li><a href="#" class="">3</a></li><li><a href="#" class="">4</a></li><li><a href="#">5</a></li><li><a href="#" class="">6</a></li></ol>
+                            <ul class="nd-direction-nav"><li><a class="nd-prev" href="#">Previous</a></li><li><a class="nd-next" href="#">Next</a></li></ul>
                         </div>
-                        <div class="saleV2 boxes">
-                            <a target="_blank" href="/sale/1586" title="Sungdo gin 发带">
-                                <img data-original="img/53bfb1e94f222.jpg" src="img/53bf982acf396.jpg"><span class="saleV2-title"><span class="sV2-t1 ellipsis">嗨！带感</span><span class="sV2-t2 ellipsis">Sungdo gin 发带→</span><span class="sale-price">￥99</span></span>
-                            </a>
-                        </div>
-                        <div class="saleV2 boxes">
-                            <a target="_blank" href="/sale/1790" title="Pinlo 多彩耳机">
-                                <img data-original="img/53bfb11a82fb4.jpg" src="img/53bfb11a82fb4.jpg"><span class="saleV2-title"><span class="sV2-t1 ellipsis">呼叫外貌协会</span><span class="sV2-t2 ellipsis">Pinlo 多彩耳机→</span><span class="sale-price">￥69</span></span>
-                            </a>
-                        </div>
-                        <div class="saleV2 boxes">
-                            <a target="_blank" href="/sale/1782" title="Gone Trippin 迷幻单品精选">
-                                <img data-original="img/53bf9854ea533.jpg" src="img/53bf9854ea533.jpg"><span class="saleV2-title"><span class="sV2-t1 ellipsis">这下嗨大了</span><span class="sV2-t2 ellipsis">Gone Trippin 迷幻单品精选→</span><span class="sale-price">￥30</span></span>
-                            </a>
-                        </div>
-                        <div class="saleV2 boxes">
-                            <a target="_blank" href="/sale/1788" title="印花裙的穿搭方式">
-                                <img data-original="img/53bfb3756f6d7.jpg" src="img/53bfb3756f6d7.jpg"><span class="saleV2-title"><span class="sV2-t1 ellipsis">花花世界</span><span class="sV2-t2 ellipsis">印花裙的穿搭方式→</span><span class="sale-price">￥70</span></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- //  首页每日新品结束 -->
-            <!-- //  首页礼物商店开始 -->
-            <div id="presents" class="giftshop content">
-                <div class="w1000">
-                    <div class="index-subtitle mgb10 mgt10">
-                        <div class="clearfix">
-                            <div class="subtitle-tip"></div>
-                            <div class="subtitle-content subtitle-gift">
-                                <h4>礼品商店</h4>
-                                <span class="subtitle-frtip">
-                                    <a href="/trends?sales=3" target="_blank">查看更多 →</a>
-                                </span>
+                        <!-- // .flexslider 首页轮播图结束 -->
+                        
+                        
+                        
+                        <!-- //  首页5个东东开始 -->
+                        <div class="hAdv02">
+                            <div class="item1" style="top:0px;left:0px;">
+                              <a href="#" target="_blank"><img src="img/1466.jpg" title=""></a>
+                            </div>
+                            <div class="item2">
+                              <a href="#" target="_blank"><img src="img/1468.jpg" title=""></a>
+                            </div>
+                            <div class="item1" style="top:0px;right:0px;">
+                              <a href="#" target="_blank"><img src="img/1469.jpg" title=""></a>
+                            </div>
+                            <div class="item1" style="bottom:0px;left:0px;">
+                              <a href="#" target="_blank"><img src="img/1467.jpg" title=""></a>
+                            </div>
+                            <div class="item1" style="bottom:0px;right:0px;">
+                              <a href="#" target="_blank"><img src="img/1470.jpg" title=""></a> 
                             </div>
                         </div>
-                    </div>
-                    <div class="gs1 clearfix">
-                        <div class="fl">
-                            <div class="imgbox">
-                                <a href="http://www.yetang.com/sale/7" target="_blank">
-                                    <img src="http://img1.yetang.com/Public/images/uploads/advert/20140625/53aa417c41f24.jpg" style="display: inline;"></a>
+                        <!-- //  首页5个东东结束 -->
+                        <!-- //  首页分类开始 -->
+                        <div class="index_new_navi">
+                            <div class="nai_one_tit"><a class="nai_on" title="潮我来">潮我来</a><a href="#" title="最热潮物">最热潮物</a><a href="#" title="最新推荐">最新推荐</a><a href="#" title="朋友发布">朋友发布</a><a class="shoe" target="_blank" href="#">潮鞋</a><a class="shoe" target="_blank" href="#">视频</a><a class="gifts" target="_blank" href="#">别跳楼了！十款跑路鞋款推荐</a> </div>  
+                            <div class="nai_two_div">
+                            <div class="naitwo_time"><div class="time_list" style="display:block;"></div></div>    <!--左边时间分类结束-->
+                            
+                            <div class="naitwo_cal"> 
+                             
+                            </div>
+                            <div class="ftm_div">
+                            <div class="cho-ms"><a href="#" class="hi_three_index current_item_three" hidefocus="true"></a></div><div class="cho-ms"><a href="#" class="hi_two_index " hidefocus="true"></a></div><div class="cho-ms"><a href="#" class="hi_one_index " hidefocus="true"></a></div>    </div>
+                            
+                            </div>
+                            <span class="clear"></span>
+                        </div>
+                        <!-- //  首页5个分类结束 -->
+                        <!-- //  首页单品瀑布流开始 -->
+                        <div id="body_wrap">
+                            <div id="hi_three_index">
+                                <div class="hi_three_div">
+                                    <div class="htd_pic">
+                                    <a class="img-t" href="#" title="熏若原创设计2013麂皮绒数码印花绿色人像手工手拎包" target="_blank"><img src="img/1138c27315e23d1abf6c1fda716830b5izE9It_310x310.jpg" alt="熏若原创设计2013麂皮绒数码印花绿色人像手工手拎包"></a>
+                                    <a class="action_bg" href="#" title="熏若原创设计2013麂皮绒数码印花绿色人像手工手拎包" target="_blank"></a>
+                                    <div class="action_content">
+                                    <div class="action_collect"><a class="like_sum_icon"></a><span class="like_sum_data">17</span><div class="clear"></div></div>
+                                    <div class="clear"></div>
+                                    </div>
+                                    <a href="#" hidefocus="true" st="unlike" class="hi_v2like js_like_icon_three"></a>
+                                    </div>
+                                    <div class="htd_info">
+                                    <a href="#" title="熏若原创设计2013麂皮绒数码印花绿色人像手工手拎包" target="_blank" class="title">熏若原创设计2013麂皮绒数码印花...</a>
+                                    <div class="user_price">
+                                    <div class="user_info">
+                                        <a href="#" target="_blank" title="暖岛精选" class="user_pic"><img src="img/38_1392851796_middle.jpg" alt="暖岛精选" width="25" height="25"></a>
+                                    <span class="time"><a href="#" title="暖岛精选" target="_blank">暖岛精选</a></span>
+                                    <div class="clear"></div>
+                                    </div>
+                                    <div class="price_info">
+                                    <span class="price_data">170.00</span><a class="price_icon"></a><div class="clear"></div>
+                                    </div>
+                                    <div class="clear"></div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="hi_three_div">
+                                <div class="htd_pic">
+                                <a class="img-t" href="#" title="鸢尾-九口山X呼吸不能说 梵花系列 原创设计笔记本" target="_blank"><img src="img/1b0a5b8fde87428e34d1f4ad99ca6f76yg5d2z_310x310.jpg" alt="鸢尾-九口山X呼吸不能说 梵花系列 原创设计笔记本"></a>
+                                <a class="action_bg" href="#" title="鸢尾-九口山X呼吸不能说 梵花系列 原创设计笔记本" target="_blank"></a>
+                                <div class="action_content">
+                                <div class="action_collect"><a class="like_sum_icon"></a><span class="like_sum_data">16</span><div class="clear"></div></div>
+                                <div class="clear"></div>
+                                </div>
+                                <a href="#" hidefocus="true" st="unlike" class="hi_v2like js_like_icon_three"></a>
+                                </div>
+                                <div class="htd_info">
+                                <a href="#" title="鸢尾-九口山X呼吸不能说 梵花系列 原创设计笔记本" target="_blank" class="title">鸢尾-九口山X呼吸不能说 梵花系...</a>
+                                <div class="user_price">
+                                <div class="user_info">
+                                    <a href="#" target="_blank" title="April_Lee" class="user_pic"><img src="img/38_1392851796_middle.jpg" alt="April_Lee" width="25" height="25"></a>
+                                <span class="time"><a href="#" title="April_Lee" target="_blank">April_Lee</a></span>
+                                <div class="clear"></div>
+                                </div>
+                                <div class="price_info">
+                                <span class="price_data">120.00</span><a class="price_icon"></a><div class="clear"></div>
+                                </div>
+                                <div class="clear"></div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="hi_three_div">
+                                <div class="htd_pic">
+                                <a class="img-t" href="#" title="鸢尾-九口山X呼吸不能说 梵花系列 原创设计笔记本" target="_blank"><img src="img/2a666dcb229b9be934f315719682c4bfWGNGg6_310x310.jpg" alt="鸢尾-九口山X呼吸不能说 梵花系列 原创设计笔记本" /></a>
+                                <a class="action_bg" href="#" title="鸢尾-九口山X呼吸不能说 梵花系列 原创设计笔记本" target="_blank"></a>
+                                <div class="action_content">
+                                <div class="action_collect"><a class="like_sum_icon"></a><span class="like_sum_data">16</span><div class="clear"></div></div>
+                                <div class="clear"></div>
+                                </div>
+                                <a href="#" hidefocus="true" st="unlike" class="hi_v2like js_like_icon_three"></a>
+                                </div>
+                                <div class="htd_info">
+                                <a href="#" title="鸢尾-九口山X呼吸不能说 梵花系列 原创设计笔记本" target="_blank" class="title">鸢尾-九口山X呼吸不能说 梵花系...</a>
+                                <div class="user_price">
+                                <div class="user_info">
+                                    <a href="#" target="_blank" title="April_Lee" class="user_pic"><img src="img/38_1392851796_middle.jpg" alt="April_Lee" width="25" height="25"></a>
+                                <span class="time"><a href="#" title="April_Lee" target="_blank">April_Lee</a></span>
+                                <div class="clear"></div>
+                                </div>
+                                <div class="price_info">
+                                <span class="price_data">120.00</span><a class="price_icon"></a><div class="clear"></div>
+                                </div>
+                                <div class="clear"></div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="hi_three_div">
+                                <div class="htd_pic">
+                                <a class="img-t" href="#" title="鸢尾-九口山X呼吸不能说 梵花系列 原创设计笔记本" target="_blank"><img src="img/11d0948ef2edfd09bc05617f2e13c4060g2pr6_310x310.jpg" alt="鸢尾-九口山X呼吸不能说 梵花系列 原创设计笔记本" /></a>
+                                <a class="action_bg" href="#" title="鸢尾-九口山X呼吸不能说 梵花系列 原创设计笔记本" target="_blank"></a>
+                                <div class="action_content">
+                                <div class="action_collect"><a class="like_sum_icon"></a><span class="like_sum_data">16</span><div class="clear"></div></div>
+                                <div class="clear"></div>
+                                </div>
+                                <a href="#" hidefocus="true" st="unlike" class="hi_v2like js_like_icon_three"></a>
+                                </div>
+                                <div class="htd_info">
+                                <a href="#" title="鸢尾-九口山X呼吸不能说 梵花系列 原创设计笔记本" target="_blank" class="title">鸢尾-九口山X呼吸不能说 梵花系...</a>
+                                <div class="user_price">
+                                <div class="user_info">
+                                    <a href="#" target="_blank" title="April_Lee" class="user_pic"><img src="img/38_1392851796_middle.jpg" alt="April_Lee" width="25" height="25"></a>
+                                <span class="time"><a href="#" title="April_Lee" target="_blank">April_Lee</a></span>
+                                <div class="clear"></div>
+                                </div>
+                                <div class="price_info">
+                                <span class="price_data">120.00</span><a class="price_icon"></a><div class="clear"></div>
+                                </div>
+                                <div class="clear"></div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="hi_three_div">
+                                <div class="htd_pic">
+                                <a class="img-t" href="#" title="【G表弟】G-SHOCK 310系列  冰魔" target="_blank"><img src="img/171a28313eb36fba54ab9e2eafa0ec3bANa858_310x310.jpg" alt="【G表弟】G-SHOCK 310系列  冰魔" /></a>
+                                <a class="action_bg" href="#" title="【G表弟】G-SHOCK 310系列  冰魔" target="_blank"></a>
+                                <div class="action_content">
+                                <div class="action_collect"><a class="like_sum_icon"></a><span class="like_sum_data">84</span><div class="clear"></div></div>
+                                <div class="clear"></div>
+                                </div>
+                                <a href="#" hidefocus="true" st="unlike" class="hi_v2like js_like_icon_three"></a>
+                                </div>
+                                <div class="htd_info">
+                                <a href="#" title="【G表弟】G-SHOCK 310系列  冰魔" target="_blank" class="title">【G表弟】G-SHOCK 310系列  冰魔</a>
+                                <div class="user_price">
+                                <div class="user_info">
+                                    <a href="#" target="_blank" title="不明真像的路人" class="user_pic"><img src="img/38_1392851796_middle.jpg" alt="不明真像的路人" width="25" height="25"></a>
+                                <span class="time"><a href="#" title="不明真像的路人" target="_blank">不明真像的路人</a></span>
+                                <div class="clear"></div>
+                                </div>
+                                <div class="price_info">
+                                <span class="price_data">998.00</span><a class="price_icon"></a><div class="clear"></div>
+                                </div>
+                                <div class="clear"></div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="hi_three_div">
+                                <div class="htd_pic">
+                                <a class="img-t" href="#" title="Loco 5-panel snapback系列 “行云流水”" target="_blank"><img src="img/698e2e684a8e500035709d2198aaaa02JW4Zjz_310x310.jpg" alt="Loco 5-panel snapback系列 “行云流水”" /></a>
+                                <a class="action_bg" href="#" title="Loco 5-panel snapback系列 “行云流水”" target="_blank"></a>
+                                <div class="action_content">
+                                <div class="action_collect"><a class="like_sum_icon"></a><span class="like_sum_data">17</span><div class="clear"></div></div>
+                                <div class="clear"></div>
+                                </div>
+                                <a href="#" hidefocus="true" st="unlike" class="hi_v2like js_like_icon_three"></a>
+                                </div>
+                                <div class="htd_info">
+                                <a href="#" title="Loco 5-panel snapback系列 “行云流水”" target="_blank" class="title">Loco 5-panel snapback系列 “行...</a>
+                                <div class="user_price">
+                                <div class="user_info">
+                                    <a href="#" target="_blank" title="Locoshanghai" class="user_pic"><img src="img/38_1392851796_middle.jpg" alt="Locoshanghai" width="25" height="25"></a>
+                                <span class="time"><a href="#" title="Locoshanghai" target="_blank">Locoshanghai</a></span>
+                                <div class="clear"></div>
+                                </div>
+                                <div class="price_info">
+                                <span class="price_data">128.00</span><a class="price_icon"></a><div class="clear"></div>
+                                </div>
+                                <div class="clear"></div>
+                                </div>
+                                </div>
+                                </div>
+                                <span class="clear"></span>
+                                <div class="m_goods" id="js_loading">正在加载更多…</div>
+                            </div>
+                            <!--分页-->
+                            <div class="page-content">
+                                <a href="#" class="fl nomore">上一页<i class="iup"></i></a>
+                                <a href="#" class="fr ">下一页<i></i></a>
+                                <span class="clear"></span>
                             </div>
                         </div>
-                        <div class="fl mgl10">
-                            <div class="imgbox">
-                                <a href="http://www.yetang.com/sale/1551" target="_blank">
-                                    <img src="http://img2.yetang.com/Public/images/uploads/advert/20140625/53aa419715b96.jpg" style="display: inline;"></a>
+                        <!-- //  首页单品瀑布流结束 -->
+                        <!-- //  首页每日新品开始 -->
+                        <div id="salesontop" class="sale-box content current">
+                            <div class="index-subtitle">
+                                <div class="clearfix">
+                                    <div class="subtitle-tip"></div>
+                                    <div class="subtitle-content subtitle-dailynew">
+                                        <h4>每日新品</h4><span class="subtitle-fltip">野糖每天推出9款新品，不要错过哦~</span><span class="subtitle-frtip"><a href="#" target="_blank">查看全部 →</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix today-saleV2">
+                                <div class="clearfix mgl10n">
+                                    <div class="boxes sV2-timebox">
+                                        <h1>每日新品</h1>
+                                        <h2>07月12日</h2>
+                                        <h3>星期六</h3>
+                                        <p class="tr blue">
+                                            <!--a target="_blank" href="#" title="BANH 世界杯系列T恤">进去看看</a--><strong> <a href="#" target="_blank">查看全部 →</a></strong>
+                                        </p>
+                                    </div>
+                                    <div class="saleV2 boxes">
+                                        <a target="_blank" href="#" title="BANH 世界杯系列T恤">
+                                            <img src="img/53bf986279b89.jpg" style="display: inline;"><span class="saleV2-title"><span class="sV2-t1 ellipsis">热血世界杯</span><span class="sV2-t2 ellipsis">BANH 世界杯系列T恤→</span><span class="sale-price">￥59</span></span>
+                                        </a>
+                                    </div>
+                                    <div class="boxes buying-tipV2">
+                                        <div class="flex-viewport" style="overflow: hidden; position: relative;">
+                                            <ul class="slides" style="width: 1200%; -webkit-transition: 0.6s; transition: 0.6s; -webkit-transform: translate3d(-717px, 0px, 0px);">
+                                                <li class="clone" style="width: 239px; float: left; display: block;">
+                                                    <div class="relative">
+                                                        <a href="#" target="_blank">
+                                                            <img src="img/52dcf49f9c3dc-250.jpg" height="295px"><span class="saleV2-title"><p class="pdt5 lh18 pdl10 pdr10 ellipsis"><strong class="blue">13人</strong>购买了<br><strong class="blue">小茶の语 手采薄荷凉叶养肤水</strong></p></span>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="" style="width: 239px; float: left; display: block;">
+                                                    <div class="relative">
+                                                        <a href="#" target="_blank">
+                                                            <img src="img/53869751811e6-250.jpg" height="295px"><span class="saleV2-title"><p class="pdt5 lh18 pdl10 pdr10 ellipsis"><strong class="blue">13人</strong>购买了<br><strong class="blue">小茶の语 便携迷你款无火小香包</strong></p></span>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li style="width: 239px; float: left; display: block;" class="flex-active-slide">
+                                                    <div class="relative">
+                                                        <a href="#" target="_blank">
+                                                            <img src="img/53a95a7d77774-250.jpg" height="295px"><span class="saleV2-title"><p class="pdt5 lh18 pdl10 pdr10 ellipsis"><strong class="blue">4人</strong>购买了<br><strong class="blue">小茶の语 芦荟接骨木紧致补水眼霜</strong></p></span>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li style="width: 239px; float: left; display: block;" class="">
+                                                    <div class="relative">
+                                                        <a href="#" target="_blank">
+                                                            <img src="img/534919ce53bca-250.jpg" height="295px"><span class="saleV2-title"><p class="pdt5 lh18 pdl10 pdr10 ellipsis"><strong class="blue">232人</strong>喜欢了<br><strong class="blue">PATOO怕痛 原创纹身贴（吃货表&透明表组合）</strong></p></span>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li style="width: 239px; float: left; display: block;" class="">
+                                                    <div class="relative">
+                                                        <a href="#" target="_blank">
+                                                            <img src="img/52dcf49f9c3dc-250.jpg" height="295px"><span class="saleV2-title"><p class="pdt5 lh18 pdl10 pdr10 ellipsis"><strong class="blue">13人</strong>购买了<br><strong class="blue">小茶の语 手采薄荷凉叶养肤水</strong></p></span>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="clone" style="width: 239px; float: left; display: block;">
+                                                    <div class="relative">
+                                                        <a href="#" target="_blank">
+                                                            <img src="img/53869751811e6-250.jpg" height="295px"><span class="saleV2-title"><p class="pdt5 lh18 pdl10 pdr10 ellipsis"><strong class="blue">13人</strong>购买了<br><strong class="blue">小茶の语 便携迷你款无火小香包</strong></p></span>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <ul class="flex-direction-nav">
+                                            <li><a class="flex-prev" href="#">Previous</a>
+                                            </li>
+                                            <li><a class="flex-next" href="#">Next</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="saleV2 boxes">
+                                        <a target="_blank" href="#" title="Sungdo gin 发带">
+                                            <img src="img/53bf982acf396.jpg"><span class="saleV2-title"><span class="sV2-t1 ellipsis">嗨！带感</span><span class="sV2-t2 ellipsis">Sungdo gin 发带→</span><span class="sale-price">￥99</span></span>
+                                        </a>
+                                    </div>
+                                    <div class="saleV2 boxes">
+                                        <a target="_blank" href="#" title="Pinlo 多彩耳机">
+                                            <img src="img/53bfb11a82fb4.jpg"><span class="saleV2-title"><span class="sV2-t1 ellipsis">呼叫外貌协会</span><span class="sV2-t2 ellipsis">Pinlo 多彩耳机→</span><span class="sale-price">￥69</span></span>
+                                        </a>
+                                    </div>
+                                    <div class="saleV2 boxes">
+                                        <a target="_blank" href="#" title="Gone Trippin 迷幻单品精选">
+                                            <img src="img/53bf9854ea533.jpg"><span class="saleV2-title"><span class="sV2-t1 ellipsis">这下嗨大了</span><span class="sV2-t2 ellipsis">Gone Trippin 迷幻单品精选→</span><span class="sale-price">￥30</span></span>
+                                        </a>
+                                    </div>
+                                    <div class="saleV2 boxes">
+                                        <a target="_blank" href="#" title="印花裙的穿搭方式">
+                                            <img src="img/53bfb3756f6d7.jpg"><span class="saleV2-title"><span class="sV2-t1 ellipsis">花花世界</span><span class="sV2-t2 ellipsis">印花裙的穿搭方式→</span><span class="sale-price">￥70</span></span>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="fl mgl10">
-                            <div class="imgbox">
-                                <a href="http://www.yetang.com/sale/6" target="_blank">
-                                    <img src="http://img1.yetang.com/Public/images/uploads/advert/20140625/53aa418d4db7c.jpg" style="display: inline;"></a>
+                        <!-- //  首页每日新品结束 -->
+                        <!-- //  首页礼物商店开始 -->
+                        <div id="presents" class="giftshop content">
+                            <div class="w1000">
+                                <div class="index-subtitle mgb10 mgt10">
+                                    <div class="clearfix">
+                                        <div class="subtitle-tip"></div>
+                                        <div class="subtitle-content subtitle-gift">
+                                            <h4>礼品商店</h4>
+                                            <span class="subtitle-frtip">
+                                                <a href="#" target="_blank">查看更多 →</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gs1 clearfix">
+                                    <div class="fl">
+                                        <div class="imgbox">
+                                            <a href="#" target="_blank">
+                                                <img src="http://img1.yetang.com/Public/images/uploads/advert/20140625/53aa417c41f24.jpg" style="display: inline;"></a>
+                                        </div>
+                                    </div>
+                                    <div class="fl mgl10">
+                                        <div class="imgbox">
+                                            <a href="#" target="_blank">
+                                                <img src="http://img2.yetang.com/Public/images/uploads/advert/20140625/53aa419715b96.jpg" style="display: inline;"></a>
+                                        </div>
+                                    </div>
+                                    <div class="fl mgl10">
+                                        <div class="imgbox">
+                                            <a href="#" target="_blank">
+                                                <img src="http://img1.yetang.com/Public/images/uploads/advert/20140625/53aa418d4db7c.jpg" style="display: inline;"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gs2 clearfix">
+                                    <div class="fl">
+                                        <div class="imgbox">
+                                            <a href="#" target="_blank">
+                                                <img src="http://img3.yetang.com/Public/images/uploads/advert/20140704/53b62a4a0da0f.jpg" style="display: inline;"></a>
+                                        </div>
+                                    </div>
+                                    <div class="fl mgl10">
+                                        <div class="imgbox">
+                                            <a href="#" target="_blank">
+                                                <img src="http://img2.yetang.com/Public/images/uploads/advert/20140704/53b62a9496e0a.jpg" style="display: inline;">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="gs2 clearfix">
-                        <div class="fl">
-                            <div class="imgbox">
-                                <a href="http://www.yetang.com/blog/?p=2480" target="_blank">
-                                    <img src="http://img3.yetang.com/Public/images/uploads/advert/20140704/53b62a4a0da0f.jpg" style="display: inline;"></a>
-                            </div>
-                        </div>
-                        <div class="fl mgl10">
-                            <div class="imgbox">
-                                <a href="http://www.yetang.com/blog/?p=2895" target="_blank">
-                                    <img src="http://img2.yetang.com/Public/images/uploads/advert/20140704/53b62a9496e0a.jpg" style="display: inline;">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             
             
             <!-- //  首页礼物商店结束 -->
@@ -485,29 +488,29 @@
                     <div id="sidemenu" class="sidemenur">
                         <ul>
                             <li class="sm-menu external transition"></li>
-                            <li class="sm-top transition"><a href="#toppest" class="sidemenu-icon"><font></font></a>
+                            <li class="sm-top transition"><a href="#" class="sidemenu-icon"><font></font></a>
                             </li>
                             <!-- 首页 -->
-                            <li class="sm-sale transition inView"><a href="#salesontop" class="sidemenu-icon"><font>每日新品</font></a><em class="arrowr"></em>
+                            <li class="sm-sale transition inView"><a href="#" class="sidemenu-icon"><font>每日新品</font></a><em class="arrowr"></em>
                             </li>
-                            <li class="sm-female transition inView"><a href="#female" class="sidemenu-icon"><font>女士</font></a><em class="arrowr"></em><span class="sidemenu-l2 sidemenu-f transition"><span class="sml2d sml2-fshg" title="女上装">上装</span><span class="sml2d sml2-fxia" title="女下装">裙装</span>
+                            <li class="sm-female transition inView"><a href="#" class="sidemenu-icon"><font>女士</font></a><em class="arrowr"></em><span class="sidemenu-l2 sidemenu-f transition"><span class="sml2d sml2-fshg" title="女上装">上装</span><span class="sml2d sml2-fxia" title="女下装">裙装</span>
                                 <span class="sml2d sml2-fxie" title="女鞋">女鞋</span><span class="sml2d sml2-fbao" title="女包">包</span><span class="sml2d sml2-fshi" title="女饰品">配饰</span><span class="sml2d sml2-fduan" title="短裤">短裤</span><span class="sml2d sml2-fhua" title="美容">美容</span></span>
                             </li>
-                            <li class="sm-male transition"><a href="#male" class="sidemenu-icon"><font>男士</font></a><em class="arrowr"></em><span class="sidemenu-l2 sidemenu-m transition"><span class="sml2d sml2-mshg" title="男上装">上装</span><span class="sml2d sml2-mxia" title="男下装">下装</span>
+                            <li class="sm-male transition"><a href="#" class="sidemenu-icon"><font>男士</font></a><em class="arrowr"></em><span class="sidemenu-l2 sidemenu-m transition"><span class="sml2d sml2-mshg" title="男上装">上装</span><span class="sml2d sml2-mxia" title="男下装">下装</span>
                                 <span class="sml2d sml2-mxie" title="男鞋">男鞋</span><span class="sml2d sml2-mbao" title="男包">包</span><span class="sml2d sml2-mshi" title="男配饰">配饰</span></span>
                             </li>
-                            <li class="sm-fun transition"><a href="#fun" class="sidemenu-icon"><font>生活</font><em class="arrowr"></em></a>
+                            <li class="sm-fun transition"><a href="#" class="sidemenu-icon"><font>生活</font><em class="arrowr"></em></a>
                                 <div class="sidemenu-l2 sidemenu-n transition" style="display: block;">
                                     <div class="sml2d sml2-fwj" title="文具纸本">文具纸本</div>
                                     <div class="sml2d sml2-fsj" title="手机数码">手机数码</div>
                                     <div class="sml2d sml2-fwnj" title="家居家具">家居家具</div>
                                 </div>
                             </li>
-                            <li class="sm-gift transition"><a href="#presents" class="sidemenu-icon"><font>礼品</font><em class="arrowr"></em></a>
+                            <li class="sm-gift transition"><a href="#" class="sidemenu-icon"><font>礼品</font><em class="arrowr"></em></a>
                             </li>
                             <!--item页-->
                             <li class="sm-ocs external transition">
-                                <iframe src="http://www.yetang.com/article/service" style="width:38px; height:38px; overflow:hidden; border:0px; padding:0; margin:0;" class="iframe-cs" scrolling="no"></iframe>
+                                
                             </li>
                         </ul>
                         <div class="sm-spacer"></div>
@@ -527,39 +530,39 @@
                         <div class="fhelp">
                             <h3 class="fhelp1">关于我们<em></em></h3>
                             <ul>
-                                <li><a href="/aboutus">关于野糖</a></li>
+                                <li><a href="#">关于野糖</a></li>
                                 <li>野糖招聘</li>
                             </ul>
                         </div>
                         <div class="fhelp">
                             <h3 class="fhelp2">配送方式<em></em></h3>
                             <ul>
-                            	<li><a href="/help/psfs#psfw">配送范围及时间</a></li>
-                                <li><a href="/help/psfs#spyh">商品验货与签收</a></li>
+                            	<li><a href="#">配送范围及时间</a></li>
+                                <li><a href="#">商品验货与签收</a></li>
                             </ul>
                         </div>
                         <div class="fhelp">
                             <h3 class="fhelp3">支付方式<em></em></h3>
                             <ul>
-                                <li><a href="/help/zffs#wszf">网上支付</a></li>
-                                <li><a href="/help/zffs#zfcj">支付常见问题</a></li>
-                                <li><a href="/help/zffs#sydjq">如何使用代金券</a></li>
+                                <li><a href="#">网上支付</a></li>
+                                <li><a href="#">支付常见问题</a></li>
+                                <li><a href="#">如何使用代金券</a></li>
                             </ul>
                         </div>
                         <div class="fhelp">
                             <h3 class="fhelp4">售后服务<em></em></h3>
                             <ul>
-                                <li><a href="/help/thhz#thhz">退换货政策</a></li>
-                                <li><a href="/help/shfw#tksm">退款说明</a></li>
-                                <li><a href="/help/shfw#aqjg">安全价格保证政策</a></li>
+                                <li><a href="#">退换货政策</a></li>
+                                <li><a href="#">退款说明</a></li>
+                                <li><a href="#">安全价格保证政策</a></li>
                             </ul>
                         </div>
                         <div class="fhelp">
                             <h3 class="fhelp5">帮助信息<em></em></h3>
                             <ul>
-                                <li><a href="/help/bzxx#cjwt">常见问题</a></li>
-                                <li><a href="/help/bzxx#zhmm">找回密码</a></li>
-                                <li><a href="/help/lxkf">联系客服</a></li>
+                                <li><a href="#">常见问题</a></li>
+                                <li><a href="#">找回密码</a></li>
+                                <li><a href="#">联系客服</a></li>
                             </ul>
                         </div>
                     </div>
@@ -576,25 +579,16 @@
                 </div>
             </div>
             <div class="footer-icp">
-                <div class="w1000">&copy; 2014 gtly.com, all rights reserved<br>闽ICP备13039990号&nbsp;<a href="/article/privacy">隐私声明</a>
+                <div class="w1000">&copy; 2014 gtly.com, all rights reserved<br>闽ICP备13039990号&nbsp;<a href="#">隐私声明</a>
                 </div>
             </div>
         </div>
 		<!--页尾结束-->
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
+        
     </body>
 </html>
