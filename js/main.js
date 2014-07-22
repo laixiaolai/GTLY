@@ -209,3 +209,180 @@ function scroll(oParent,obig,osmall,prev,next,actived){
     }
 
 };
+
+
+
+//注册
+$(function() {
+    //弹出
+    $("#aa a,.reg a").click(function() {
+        $("#reg_setp,#setp_quicklogin").show();
+        
+        $("#reg_setp").animate({
+            left: 0 //移动位置
+        },
+        500, "easeOutQuart") //速度与形式
+    });
+    
+    //返回
+    $(".back_setp").click(function() {
+        "block" == $("#setp_quicklogin").css("display") && $("#reg_setp").animate({
+            left: "100%"
+        },
+        500, "easeOutQuart", //速度与形式
+        function() {
+            $("#reg_setp,#setp_quicklogin").hide()
+        })
+    });
+});
+
+$(function() {
+    
+    // 列表弹出POPUP
+    $.fn.showSlide = function() {
+        $(this).hover(function() {
+            var a = $(this);
+            dsfdjsk = setTimeout(function() {
+                a.find(".sc_detail").stop(!0, !1).animate({
+                    bottom: "0"
+                },
+                450, "easeOutQuart")
+            },
+            50)
+        },
+        function() {
+            clearTimeout(dsfdjsk);
+            $(this).find(".sc_detail").stop(!0, !1).animate({
+                bottom: "-60px"
+            },
+            380, "easeOutQuart")
+        })
+    };
+    $(".list_grid_1").showSlide();
+    
+    
+    // 返回顶部 
+    $(window).scroll(function() {
+        0 < $(window).scrollTop() ? ($("#footer_side").css({
+            bottom: 30
+        }), $("#backtop").click(function() {
+            if (!$("html,body").is(":animated")) return $("html,body").animate({
+                scrollTop: 0
+            },
+            500),
+            !1
+        })) : $("#footer_side").css({
+            bottom: -250
+        })
+    });
+    
+    
+    
+    //搜索
+    if (document.getElementById("search_class_emu")) {
+        $("#search_class option:eq(" + $(".search_class_cur").index() + ")").attr("selected", !0);
+        $(".searchtxt").focus(function() {
+            $("#search_class_emu").stop(!0, !0).slideDown(500, "easeOutQuart")
+        });
+        $("#header").mouseleave(function() {
+            $("#search_class_emu").stop(!0, !0).slideUp(500, "easeOutQuart");
+            document.getElementById("search").getElementsByTagName("input")[0].blur()
+        });
+        var v = $("#search form").attr("data-action");
+        $("#search_class_emu li").click(function() {
+            $("#search_class_emu li").removeClass("search_class_cur");
+            $(this).addClass("search_class_cur");
+            $("#search_class option[selected]").removeAttr("selected");
+            var a = $(this).attr("data-cat") || "";
+            $("#search form").attr("action", v + a + "/")
+        })
+    }
+    
+
+    
+    
+    
+    //用户_登录_输入款_焦点
+    $.fn.placeholder = function() {
+        var a = $(this),
+        b = a.val();
+        a.focus(function() {
+            a.val() == b && a.val("");
+        }).blur(function() {
+            "" == a.val() && a.val(b)
+        })
+    };
+
+    $(".searchtxt").placeholder();//搜索框焦点
+    $(".comment_text").placeholder();//评论框焦点
+    
+    $(".loginusername").placeholder();
+    $(".loginuserpasswordt").focus(function() {
+        "\u5bc6\u7801" == $(this).attr("value") && ($(".loginuserpasswordt").hide(), $(".loginuserpasswordp").show(), document.getElementsByName("password")[0].focus())
+    });
+    $(".loginuserpasswordp").blur(function() {
+        "" == $(this).val() && ($(".loginuserpasswordt").show(), $(".loginuserpasswordp").hide(), $(".loginuserpasswordt").attr("value", "\u5bc6\u7801"))
+    });
+    
+});
+
+
+//注册登录页面 背景
+(function($){   
+    $.fn.fullscreenr = function(options) {
+        if(options.height === undefined) alert('Please supply the background image height, default values will now be used. These may be very inaccurate.');
+        if(options.width === undefined) alert('Please supply the background image width, default values will now be used. These may be very inaccurate.');
+        if(options.bgID === undefined) alert('Please supply the background image ID, default #bgimg will now be used.');
+        var defaults = { width: 1280,  height: 1024, bgID: 'bgimg' };
+        var options = $.extend({}, defaults, options); 
+        $(document).ready(function() { $(options.bgID).fullscreenrResizer(options); });
+        $(window).bind("resize", function() { $(options.bgID).fullscreenrResizer(options); });      
+        return this;        
+    };  
+    $.fn.fullscreenrResizer = function(options) {
+        // Set bg size
+        var ratio = options.height / options.width; 
+        // Get browser window size
+        var browserwidth = $(window).width();
+        var browserheight = $(window).height();
+        // Scale the image
+        if ((browserheight/browserwidth) > ratio){
+            $(this).height(browserheight);
+            $(this).width(browserheight / ratio);
+        } else {
+            $(this).width(browserwidth);
+            $(this).height(browserwidth * ratio);
+        }
+        // Center the image
+        $(this).css('left', (browserwidth - $(this).width())/2);
+        $(this).css('top', (browserheight - $(this).height())/2);
+        return this;        
+    };
+})(jQuery);
+
+
+//全屏背景
+$(function(){
+    var theWindow        = $(window),
+        $bg              = $("#bg"),
+        aspectRatio      = $bg.width() / $bg.height();
+                                
+    function resizeBg() {
+        
+        if ( (theWindow.width() / theWindow.height()) < aspectRatio ) {
+            $bg
+                .removeClass()
+                .addClass('bgheight');
+        } else {
+            $bg
+                .removeClass()
+                .addClass('bgwidth');
+        }
+                    
+    }
+                                
+    theWindow.resize(function() {
+        resizeBg();
+    }).trigger("resize");
+
+});

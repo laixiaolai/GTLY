@@ -15,6 +15,7 @@ button,
 input,
 select,
 textarea {
+  outline: none;-webkit-appearance:none;
     color: #222;
 }
 
@@ -104,8 +105,9 @@ border: 0;
 font-size: 100%;
 font: inherit;
 }
+html,body{height: 100%;}
 body {
-font: 12px/1.5 Helvetica, "微软雅黑", "Hiragino Sans GB", Tahoma, Arial, "\5b8b\4f53", sans-serif;
+font: 12px/1.5 Helvetica, Microsoft Yahei, "Hiragino Sans GB", Tahoma, Arial, "\5b8b\4f53", sans-serif;
 }
 a{ color:inherit; text-decoration:none;}
 .fl {
@@ -802,6 +804,98 @@ div.msgContainer{width: 100%;clear:both;font-size: 15px;text-align: center;line-
 .goodsItem244 .goodsFuncCon .theShadow p{position:relative;}
 
 
+/* 用户 登录   */
+
+.user_login_top{position: relative;float: right;width: 100%;text-align: center;}
+.user_login_floater{height: 50%;margin-bottom: -250px;position: relative;}
+.user_login_back{width: 450px;clear: both;padding-bottom: 10px;padding-right: 5px;position: relative;margin: 0 auto;text-align: right;}
+.user_login_back a{color: #444;text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);}
+#bgimg{position:absolute;z-index: -1;}
+.user_login_box{border-top: 3px #0095cd solid;height: 400px;width: 360px;clear: both;position: relative;margin: 0 auto;background-color: #fff;padding: 50px;-webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);-moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);}
+.user_login_box .title{color: #292929;height: 50px;margin-bottom: 20px;font-family:Microsoft Yahei;}
+.user_login_box .title .fl{font-size: 30px;}
+.user_login_box .title .fr{line-height: 50px;font-size: 18px;}
+.user_login_box .title .fr a{font-size: 18px;color: #FF4200;padding-left: 5px;font-family:Microsoft Yahei;}
+.user_login_box H3{font-weight: normal;font-size: 12px;}
+.user_login_box .logininput{padding-top: 20px;}
+.logininput input{display: block;height: 14px;line-height: 14px;width: 100%;border: #DAE2E5 1px solid;text-indent: 10px;overflow: hidden;color: #979696;padding-top: 13px;padding-bottom: 13px;margin-bottom: 10px;}
+.logininput input{-webkit-transition: all 0.2s ease-in;-moz-transition: all 0.2s ease-in;-o-transition: all 0.2s ease-in;transition: all 0.2s ease-in;}
+.logininput input:focus{border-color: #0095cd;}
+
+/* 登录按钮*/
+.loginbtn{border-bottom: 1px solid #ecf2f5;padding-bottom: 30px;}
+.loginsubmit input{width: 130px;height: 40px;line-height: 40px;color: #fff;background: #0095cd;display: block;text-align: center;font-size: 20px;border: none;font-family:Microsoft Yahei;cursor: pointer;}
+.loginsubmit{width: 130px;height: 40px;margin: 15px 20px 0 0;position: relative;}
+.loginbtn .logcheckbox{padding-top: 30px;}
+.loginbtn .logcheckbox input{vertical-align: middle;}
+.loginbtn .fr{padding-top: 30px;}
+
+/* 第三方登录*/
+.thirdlogin .pd50{padding-top: 30px;padding-bottom: 30px;}
+.thirdlogin h4{color: #6B6A6A;font-weight: 500;margin-bottom: 20px;}
+.thirdlogin ul li{display: block;float: left;margin-bottom: 10px;}
+.thirdlogin ul li a{display: block;float: left;height: 40px;line-height: 40px;width: 170px;color: #fff;text-indent: 60px;}
+#sinal a{background: #d63b22 url('../images/user_log_weibo.png') no-repeat 0px -5px;}
+#qql a{background: #3eb0d8 url('../images/user_log_qq.png') no-repeat 0px -5px;}
+.thirdlogin ul li{margin-right: 20px;}
+
+/* 用户 注册*/
+.user_reg_back{width: 960px;clear: both;padding-bottom: 10px;padding-right: 5px;position: relative;margin: 0 auto;text-align: right;}
+.user_reg_back a{color: #444;text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);}
+.user_reg_box{border-top: 3px #0095cd solid;height: 420px;width: 860px;clear: both;position: relative;margin: 0 auto;background-color: #fff;padding: 50px;-webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);-moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);}
+.user_reg_box .title{font-family: "arial", Microsoft Yahei;color: #292929;height: 50px;margin-bottom: 40px;}
+.user_reg_box .title .fl{font-size: 30px;}
+.user_reg_box .title .fr{line-height: 50px;font-size: 18px;}
+.user_reg_box .title .fr a{font-size: 18px;color: #FF4200;font-family: "arial", Microsoft Yahei;padding-left: 5px;}
+.user_reg_fl{}
+.thirdreg{float:right;text-align:left;width:170px;border-left: 1px solid #ecf2f5;padding-left:80px;height:320px;}
+.thirdreg .pd50{padding-bottom: 30px;}
+.thirdreg h4{color: #6B6A6A;font-weight: 500;margin-bottom: 20px;}
+.thirdreg ul li{display: block;float: left;margin-bottom: 10px;}
+.thirdreg ul li a{display: block;float: left;height: 40px;line-height: 40px;width: 170px;color: #fff;text-indent: 60px;}
+#sinal a{background: #d63b22 url('../img/css_img/user_log_weibo.png') no-repeat 0px -5px;}
+#qql a{background: #3eb0d8 url('../img/css_img/user_log_qq.png') no-repeat 0px -5px;}
+.thirdreg ul li{margin-right: 20px;}
+.reginput{}
+.reginput label{float: left;padding-top: 15px;text-align: right;font-size:14px;color:#999;}
+.user_reg_input_box{margin-left: 80px;}
+.reginput input{height: 14px;line-height: 14px;width: 280px;border: #DAE2E5 1px solid;text-indent: 10px;color: #979696;padding-top: 13px;padding-bottom: 13px;margin-bottom:10px;}
+.reginput input.code{width:100px;}
+.reginput input{-webkit-transition: all 0.2s ease-in;-moz-transition: all 0.2s ease-in;-o-transition: all 0.2s ease-in;transition: all 0.2s ease-in;}
+.reginput input:focus{border-color: #0095cd;}
+.regsubmit{width: 130px;height: 40px;margin: 15px 20px 0 80px;position: relative;}
+.regsubmit input{width: 130px;height: 40px;line-height: 40px;color: #fff;background: #0095cd;display: block;text-align: center;font-size: 20px;border: none;font-family: "arial", Microsoft Yahei;cursor: pointer;}
+#J_emailTip{padding: 10px 0 0 10px;}
+#J_passwordTip{padding: 10px 0 0 10px;}
+#J_repasswordTip{padding: 10px 0 0 10px;}
+#J_nickTip{padding: 10px 0 0 10px;}
+#J_logemailTip{float:right;}
+
+/*全屏背景*/
+#bg{position: fixed;top: 0;left: 0;}
+.bgwidth{width: 100%;}
+.bgheight{height: 100%;}
+
+/*会员帐号*/
+.user_center{width:1200px;margin:0 auto;}
+#umnav{height: 60px;}
+#umnav li{width: 150px;height: 60px;float: left;margin-right: 1px;}
+#umnav li a{display: block;background: #6e6f71;color: #fff;font-size: 18px;line-height: 60px;text-align: center;font-family: Microsoft Yahei, Arial;}
+#umnav li#umnactive a{background: #fff;color: #000}
+.umbody{width: 100%;height: auto;background: #fff}
+.pnitem{float: left;width: 100%;float: left;font-size: 14px;color: #757575;height: 60px;line-height: 60px;}
+.pnitem span{float: left;width: 130px;text-align: right;}
+.pnitem span font{margin-right: 15px;}
+.pnitem input, .pnitem textarea{width: 270px;height: 15px;margin-left:20px;padding-top: 12px;padding-bottom: 13px;margin-top:10px;padding-left:10px;margin-bottom: 10px;color: #383838;border: #DAE2E5 1px solid;font-size: 14px;font-family: Microsoft Yahei, Arial;float: left;-webkit-transition: all 0.2s ease-in;-moz-transition: all 0.2s ease-in;-o-transition: all 0.2s ease-in;transition: all 0.2s ease-in;}
+.pnitem input:focus, .pnitem textarea:focus{border-color: #0095cd;}
+.pnitem textarea{height: 80px;width: 400px;padding: 10px;text-indent: 0;line-height: 20px;resize: none}
+.pnline{height: 1px;width: 100%;border-bottom: #ecf2f5 1px solid;float: left;}
+.pnitem .post_check_info{position: relative;left: 0;float: left;margin-top: 10px;margin-left: 10px;}
+#pnsub{margin-left: 150px;margin-top: 30px;float: left;margin-bottom: 50px;}
+.subbtn{width: 130px;height: 40px;background: #0095cd;font-size: 22px;line-height: 34px;text-align: center;border: none;font-family: Microsoft Yahei, Arial;color: #fff}
+#J_edit_nickTip{margin-left:20px;text-align:left;}
+input.radio{width:20px;float:none;border:none;}
+.pnitem select{margin-left:20px;margin-top:20px;}
 
 
 

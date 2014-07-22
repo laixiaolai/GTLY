@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>登陆-钢铁老爷</title>
+        <meta name="description" content="钢铁老爷">
+        <meta name="description" content=" 钢铁老爷，汇集全球高品质，好设计的购物社区，坚持独特，不追随潮流，静静为用户提供好东西">
+        <link type="image/x-icon" href="img/favicon.ico" rel="shortcut icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">您使用的是<strong>低版本的浏览器</strong>，为了您有更好的体验， <a href="http://browsehappy.com/">请升级您的浏览器 </a>。</p>
+        <![endif]-->
+	<img src="" id="bg" class="bgwidth" />
+	<div class="user_login_top">&nbsp;</div>
+	<div class="user_login_floater"></div>
+	<div class="user_login_back">
+	    <a href="#">返回首页</a>
+	</div>
+	<div class="user_login_box">
+	    <div class="title">
+	        <div class="fl">会员登录</div>
+	        <div class="fr">还没有账号<a href="#">立即注册</a></div>
+	    </div>
+	    <h3>
+	        <div class="clear">
+	        </div>
+	        <span>使用邮箱登录</span>
+	        <span id="J_logemailTip" class="onShow">
+	        </span>
+	    </h3>
+	    <form action="/login.htm" method="post" id="J_login_form">
+	        <input type="hidden" name="ret_url" value="">
+	        <div class="logininput">
+	            <input type="text" name="email" class="loginusername" id="J_logemail"
+	            value="邮箱">
+	            <input type="text" class="loginuserpasswordt" value="密码">
+	            <input type="password" name="password" class="loginuserpasswordp" style="display: none;">
+	        </div>
+	        <div class="loginbtn">
+	            <div class="loginsubmit fl">
+	                <input type="submit" value="登录">
+	            </div>
+	            <div class="logcheckbox fl">
+	                <label>
+	                    <input type="checkbox" value="1" name="remember" class="check" checked="checked">
+	                    <span>
+	                        <a href="#" target="_blank">忘记密码？</a>
+	                    </span>
+	                </label>
+	            </div>
+	            <div class="clear">
+	            </div>
+	        </div>
+	    </form>
+	    <div class="thirdlogin">
+	        <div class="pd50">
+	            <h4>用第三方帐号直接登录</h4>
+	            <ul>
+	                <li id="sinal">
+	                    <a href="#" target="_blank">微博账号登陆</a>
+	                </li>
+	                <li id="qql" style="margin-right: 0px;">
+	                    <a href="#" target="_blank">QQ账号登陆</a>
+	                </li>
+	                <div class="clear">
+	                </div>
+	            </ul>
+	            <div class="clear">
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+	<script type="text/javascript" src="js/formvalidator.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+	<script type="text/javascript">$(document).ready(function(){
+		$.formValidator.initConfig({formid:'J_login_form',autotip:false});
+		
+		$('#J_logemail').formValidator({onshow:' ',onfocus:' ', oncorrect: ' '})
+	        .inputValidator({min:1,onerror:'格式错误'})
+	        .regexValidator({regexp:'email',datatype:'enum',onerror:'格式错误'});
+		 
+	});
+	</script>
+</body>
+</html>
