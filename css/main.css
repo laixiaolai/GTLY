@@ -10,19 +10,9 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-html,
-button,
-input,
-select,
-textarea {
-  outline: none;-webkit-appearance:none;
-    color: #222;
-}
+html,button,input,select,textarea {outline: none;-webkit-appearance:none; color: #222;}
 
-html {
-    font-size: 1em;
-    line-height: 1.4;
-}
+html {font-size: 1em;line-height: 1.4;}
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
@@ -30,112 +20,154 @@ html {
  * Customize the background color to match your design.
  */
 
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
+::-moz-selection {background: #b3d4fc;text-shadow: none;}
 
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
+::selection {background: #b3d4fc;text-shadow: none;}
 
 /*
  * A better looking default horizontal rule
  */
 
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
+hr {display: block;height: 1px;border: 0;border-top: 1px solid #ccc;margin: 1em 0;padding: 0;}
 
 /*
  * Remove the gap between images, videos, audio and canvas and the bottom of
  * their containers: h5bp.com/i/440
  */
 
-audio,
-canvas,
-img,
-video {
-    vertical-align: middle;
-}
+audio,canvas,img,video {vertical-align: middle;border:0;-ms-interpolation-mode:bicubic;}
 
 /*
  * Remove default fieldset styles.
  */
 
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
+fieldset {border: 0;margin: 0;padding: 0;}
 
 /*
  * Allow only vertical resizing of textareas.
  */
 
-textarea {
-    resize: vertical;
-}
+textarea {resize: vertical;}
 
 /* ==========================================================================
    Browse Happy prompt
    ========================================================================== */
 
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
+.browsehappy {margin: 0.2em 0;background: #ccc;color: #000;padding: 0.2em 0;}
 
 /* ==========================================================================
    laiyongzhao's custom styles
    ========================================================================== */
 /*重置样式*/
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
-margin: 0;
-padding: 0;
-border: 0;
-font-size: 100%;
-font: inherit;
-}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;}
 html,body{height: 100%;}
-body {
-font: 12px/1.5 Helvetica, Microsoft Yahei, "Hiragino Sans GB", Tahoma, Arial, "\5b8b\4f53", sans-serif;
-}
-a{ color:inherit; text-decoration:none;}
-.fl {
-float: left;
-display: inline;
-}
-.fr {
-float: right;
-display: inline;
-}
-.relative {
-position: relative;
-}
-.transition {
--moz-transition: all 0.3s ease-in-out;
--webkit-transition: all 0.3s ease-in-out;
--ms-transition: all 0.3s ease-in-out;
--o-transition: all 0.3s ease 0s;
-transition: all 0.3s ease-in-out;
-}
+body{font: 12px/1.5 Helvetica, Microsoft Yahei, "Hiragino Sans GB", Tahoma, Arial, "\5b8b\4f53", sans-serif;}
+a{color:inherit;text-decoration:none;}
+.fl{float: left;display: inline;}
+.fr{float: right;display: inline;}
+.relative{position: relative;}
+.transition{-moz-transition: all 0.3s ease-in-out;-webkit-transition: all 0.3s ease-in-out;-ms-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease 0s;transition: all 0.3s ease-in-out;}
 
 /* ==========================================================================
   注册,登陆
    ========================================================================== */
-   
+  
+/* 用户 登录   */
+
+.user_login_top{position: relative;float: right;width: 100%;text-align: center;}
+.user_login_floater{height: 50%;margin-bottom: -250px;position: relative;}
+.user_login_back{width: 450px;clear: both;padding-bottom: 10px;padding-right: 5px;position: relative;margin: 0 auto;text-align: right;}
+.user_login_back a{color: #444;text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);}
+#bgimg{position:absolute;z-index: -1;}
+.user_login_box{border-top: 3px #0095cd solid;height: 400px;width: 360px;clear: both;position: relative;margin: 0 auto;background-color: #fff;padding: 50px;-webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);-moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);}
+.user_login_box .title{color: #292929;height: 50px;margin-bottom: 20px;font-family:Microsoft Yahei;}
+.user_login_box .title .fl{font-size: 30px;}
+.user_login_box .title .fr{line-height: 50px;font-size: 18px;}
+.user_login_box .title .fr a{font-size: 18px;color: #FF4200;padding-left: 5px;font-family:Microsoft Yahei;}
+.user_login_box H3{font-weight: normal;font-size: 12px;}
+.user_login_box .logininput{padding-top: 20px;}
+.logininput input{display: block;height: 14px;line-height: 14px;width: 100%;border: #DAE2E5 1px solid;text-indent: 10px;overflow: hidden;color: #979696;padding-top: 13px;padding-bottom: 13px;margin-bottom: 10px;}
+.logininput input{-webkit-transition: all 0.2s ease-in;-moz-transition: all 0.2s ease-in;-o-transition: all 0.2s ease-in;transition: all 0.2s ease-in;}
+.logininput input:focus{border-color: #0095cd;}
+
+/* 登录按钮*/
+.loginbtn{border-bottom: 1px solid #ecf2f5;padding-bottom: 30px;}
+.loginsubmit input{width: 130px;height: 40px;line-height: 40px;color: #fff;background: #0095cd;display: block;text-align: center;font-size: 20px;border: none;font-family:Microsoft Yahei;cursor: pointer;}
+.loginsubmit{width: 130px;height: 40px;margin: 15px 20px 0 0;position: relative;}
+.loginbtn .logcheckbox{padding-top: 30px;}
+.loginbtn .logcheckbox input{vertical-align: middle;}
+.loginbtn .fr{padding-top: 30px;}
+
+/* 第三方登录*/
+.thirdlogin .pd50{padding-top: 30px;padding-bottom: 30px;}
+.thirdlogin h4{color: #6B6A6A;font-weight: 500;margin-bottom: 20px;}
+.thirdlogin ul li{display: block;float: left;margin-bottom: 10px;}
+.thirdlogin ul li a{display: block;float: left;height: 40px;line-height: 40px;width: 170px;color: #fff;text-indent: 60px;}
+#sinal a{background: #d63b22 url('../images/user_log_weibo.png') no-repeat 0px -5px;}
+#qql a{background: #3eb0d8 url('../images/user_log_qq.png') no-repeat 0px -5px;}
+.thirdlogin ul li{margin-right: 20px;}
+
+/* 用户 注册*/
+.user_reg_back{width: 960px;clear: both;padding-bottom: 10px;padding-right: 5px;position: relative;margin: 0 auto;text-align: right;}
+.user_reg_back a{color: #444;text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);}
+.user_reg_box{border-top: 3px #0095cd solid;height: 420px;width: 860px;clear: both;position: relative;margin: 0 auto;background-color: #fff;padding: 50px;-webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);-moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);}
+.user_reg_box .title{font-family: "arial", Microsoft Yahei;color: #292929;height: 50px;margin-bottom: 40px;}
+.user_reg_box .title .fl{font-size: 30px;}
+.user_reg_box .title .fr{line-height: 50px;font-size: 18px;}
+.user_reg_box .title .fr a{font-size: 18px;color: #FF4200;font-family: "arial", Microsoft Yahei;padding-left: 5px;}
+.user_reg_fl{}
+.thirdreg{float:right;text-align:left;width:170px;border-left: 1px solid #ecf2f5;padding-left:80px;height:320px;}
+.thirdreg .pd50{padding-bottom: 30px;}
+.thirdreg h4{color: #6B6A6A;font-weight: 500;margin-bottom: 20px;}
+.thirdreg ul li{display: block;float: left;margin-bottom: 10px;}
+.thirdreg ul li a{display: block;float: left;height: 40px;line-height: 40px;width: 170px;color: #fff;text-indent: 60px;}
+#sinal a{background: #d63b22 url('../img/css_img/user_log_weibo.png') no-repeat 0px -5px;}
+#qql a{background: #3eb0d8 url('../img/css_img/user_log_qq.png') no-repeat 0px -5px;}
+.thirdreg ul li{margin-right: 20px;}
+.reginput{}
+.reginput label{float: left;padding-top: 15px;text-align: right;font-size:14px;color:#999;}
+.user_reg_input_box{margin-left: 80px;}
+.reginput input{height: 14px;line-height: 14px;width: 280px;border: #DAE2E5 1px solid;text-indent: 10px;color: #979696;padding-top: 13px;padding-bottom: 13px;margin-bottom:10px;}
+.reginput input.code{width:100px;}
+.reginput input{-webkit-transition: all 0.2s ease-in;-moz-transition: all 0.2s ease-in;-o-transition: all 0.2s ease-in;transition: all 0.2s ease-in;}
+.reginput input:focus{border-color: #0095cd;}
+.regsubmit{width: 130px;height: 40px;margin: 15px 20px 0 80px;position: relative;}
+.regsubmit input{width: 130px;height: 40px;line-height: 40px;color: #fff;background: #0095cd;display: block;text-align: center;font-size: 20px;border: none;font-family: "arial", Microsoft Yahei;cursor: pointer;}
+#J_emailTip{padding: 10px 0 0 10px;}
+#J_passwordTip{padding: 10px 0 0 10px;}
+#J_repasswordTip{padding: 10px 0 0 10px;}
+#J_nickTip{padding: 10px 0 0 10px;}
+#J_logemailTip{float:right;}
+
+/*全屏背景*/
+#bg{position: fixed;top: 0;left: 0;}
+.bgwidth{width: 100%;}
+.bgheight{height: 100%;}
+
+/*会员帐号*/
+.user_center{width:1200px;margin:0 auto;}
+#umnav{height: 60px;}
+#umnav li{width: 150px;height: 60px;float: left;margin-right: 1px;}
+#umnav li a{display: block;background: #6e6f71;color: #fff;font-size: 18px;line-height: 60px;text-align: center;font-family: Microsoft Yahei, Arial;}
+#umnav li#umnactive a{background: #fff;color: #000}
+.umbody{width: 100%;height: auto;background: #fff}
+.pnitem{float: left;width: 100%;float: left;font-size: 14px;color: #757575;height: 60px;line-height: 60px;}
+.pnitem span{float: left;width: 130px;text-align: right;}
+.pnitem span font{margin-right: 15px;}
+.pnitem input, .pnitem textarea{width: 270px;height: 15px;margin-left:20px;padding-top: 12px;padding-bottom: 13px;margin-top:10px;padding-left:10px;margin-bottom: 10px;color: #383838;border: #DAE2E5 1px solid;font-size: 14px;font-family: Microsoft Yahei, Arial;float: left;-webkit-transition: all 0.2s ease-in;-moz-transition: all 0.2s ease-in;-o-transition: all 0.2s ease-in;transition: all 0.2s ease-in;}
+.pnitem input:focus, .pnitem textarea:focus{border-color: #0095cd;}
+.pnitem textarea{height: 80px;width: 400px;padding: 10px;text-indent: 0;line-height: 20px;resize: none}
+.pnline{height: 1px;width: 100%;border-bottom: #ecf2f5 1px solid;float: left;}
+.pnitem .post_check_info{position: relative;left: 0;float: left;margin-top: 10px;margin-left: 10px;}
+#pnsub{margin-left: 150px;margin-top: 30px;float: left;margin-bottom: 50px;}
+.subbtn{width: 130px;height: 40px;background: #0095cd;font-size: 22px;line-height: 34px;text-align: center;border: none;font-family: Microsoft Yahei, Arial;color: #fff}
+#J_edit_nickTip{margin-left:20px;text-align:left;}
+input.radio{width:20px;float:none;border:none;}
+.pnitem select{margin-left:20px;margin-top:20px;}
+
    
 /* ==========================================================================
-  首页
+  首页 index.html
    ========================================================================== */   
 /*头部*/
 .tophead{ width:100%; height:50px; padding-top:62px; background-color:#282828;}
@@ -398,8 +430,54 @@ strong, b{font-weight: bold;}
 .share50-db {background-position:-201px -731px;}
 
 
+
 /* ==========================================================================
-   分类列表页
+   大分类列表页 big_cats.html
+   ========================================================================== */
+
+.content-wrap{position:static;background-color:#FFF;border-bottom:1px solid #e7e7e4;border-top:1px solid #e7e7e4}
+.content-wrap-inner{padding-bottom:28px}
+.inner{width:980px;margin:0 auto}
+.section.first{margin-top:0px}
+li.col{-webkit-font-smoothing:subpixel-antialiased;-webkit-backface-visibility:hidden; list-style: none;}
+li.col:hover .poster-title a,li.col:hover a.cat-link{text-decoration:underline}
+li.col:hover .poster-inner{cursor:pointer;background:#000}
+li.col:active .poster-inner{cursor:pointer;background:#000}
+li.col:hover .poster-outer{border-color:#cacaca;border-bottom-color:#dadada}
+li.col:hover img{opacity:.95;filter:alpha(opacity:95);}
+li.col:active img{opacity:.90;filter:alpha(opacity:90);}
+li.col:hover .poster-title{border-color:#cacaca;border-bottom-color:#dadada;box-shadow:0 0 2px 0 rgba(0,0,0,.15)}
+.poster-outer{border:#e2e2e2 solid 1px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;position:relative;box-shadow:0 2px 1px 0 rgba(0,0,0,.1);-webkit-transition:all .1s ease;-o-transition:all .1s ease;-moz-transition:all .1s ease;transition:all .1s ease;z-index:5}
+.poster-inner{border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;border:4px white solid;position:relative;overflow:hidden;background:#f5f5f1;transition:all .1s ease;-webkit-transition:all .1s ease;-moz-transition:all .1s ease}
+.poster-inner a.cat-link{display:block}
+.poster-inner img{position:relative;opacity:1;float:left;transition:all .1s ease;-webkit-transition:all .1s ease;-moz-transition:all .1s ease}
+.poster-title{margin:-1px 4px 0;display:block;background:white;border-radius:0 0 3px 3px;-webkit-border-radius:0 0 3px 3px;-moz-border-radius:0 0 3px 3px;font-size:14px;font-family:Arial,Helvetica,sans-serif;font-weight:bold;box-shadow:0 0 2px 0 rgba(0,0,0,.1);-webkit-box-shadow:0 0 2px 0 rgba(0,0,0,.1);-moz-box-shadow:0 0 2px 0 rgba(0,0,0,.1);border:#e2e2e2 solid 1px;position:relative}
+.poster-inner a{display:block}
+.poster-title a{display:block;padding:10px 20px 10px 8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;transition:all .1s ease;-webkit-transition:all .1s ease;-moz-transition:all .1s ease}
+.price_filter_text{background:#7ac142;padding:5px 12px;border-radius:0 2px 2px 0;border:1px solid #75b93f;border-bottom-color:#70b13d;border-right-color:#70b13d;color:#fff;font-size:12px;font-weight:normal;text-shadow:1px 0 2px #5f9734;position:absolute;top:-40px;left:-5px}
+.col a:link,.col a:visited{color:#0192b5;text-decoration:none}
+.col a:hover,.col a:active{text-decoration:underline}
+.col a.credit{font-size:11px;font-family:Arial,Helvetica,sans-serif;color:#999;position:absolute;bottom:6px;right:7px}
+.hover{border-color:#cacaca;border-bottom-color:#dadada;box-shadow:0 0 2px 0 rgba(0,0,0,.15);-webkit-box-shadow:0 0 2px 0 rgba(0,0,0,.15);-moz-box-shadow:0 0 2px 0 rgba(0,0,0,.15)}
+.rsquo{width:22px;height:22px;position:absolute;top:8px;right:3px;padding-left:2px;color:#666;background:url(../img/css_img/weddings-sprite.20120808190950.png) no-repeat;background-position:0 -328px}
+.col{float:left}
+.col-last{margin-right:0!important}
+.col-visible .col{background-color:rgba(227,227,227,0.8)}
+.col{margin-right:28px}
+.col3{width:224px}
+.col4{width:308px}
+.col6{width:476px}
+.col{margin-bottom:28px}
+.col6 .poster-inner{height:378px}
+.col4 .poster-inner{height:245px}
+.col3 .poster-inner{height:178px}
+.mosaic-span .col6.col-last{float:right}
+.col6 .poster-inner img{width:476px}
+.col3 .poster-inner img{width:224px;height:178px}
+.col4 .poster-inner img{margin-top:-29px}
+
+/* ==========================================================================
+   小分类列表页 cats.html
    ========================================================================== */
 .category-nav-wrap{width: 980px;margin: 15px auto 50px auto;padding: 0;}
 .category-nav-wrap .nav_left{width: 780px;min-height: 295px;border-top: 4px #231f20 solid;float: left;border-bottom: 1px solid #e6e7e8;position: relative;}
@@ -460,8 +538,8 @@ category-nav-wrap dl.list_down .list_8{background-color: rgba(142,142,142,0.10);
 .filter-wrap i{width: 980px;height: 20px;display: inline-block;position: absolute;left: 0;top: 0;z-index: -1;background: url(../img/css_img/site_dotted.png) repeat-x center;}
 .goods-contenter{clear: both;width: 1035px;margin: 0 auto 50px auto;text-align: center;}
 .goods{width: 100%;}
-.good-item-wrap{border: 1px #dadada solid;}
 .good-item{float: left;border: 1px #fff solid;display: inline;text-align: left;position: relative;width: 290px;margin: 0 16.5px 16px 16.5px;padding: 10px 10px 19px 10px;z-index: 1;background: #fff;}
+.good-item:hover{border: 1px #dadada solid;}
 .good-item .pic{width: 290px;overflow: hidden;text-align: center;position: relative;background: 0;}
 div .pic{background: url(../images/core/bg_pic.png) #fff repeat 0 0;}
 .good-item .pic img{vertical-align: top;}
@@ -554,7 +632,7 @@ good-item dl.share-user-dl{width: 100%;text-align: center;zoom: 1;font-size: 12p
 
 
 /* ==========================================================================
-   商品购买页
+   商品购买页 buy.html
    ========================================================================== */
 #main {width: 1000px;margin: 5px auto 10px auto;height: auto;background: none;}
 #main .position {width: 100%;color: #bfbfbf;vertical-align: middle;font-size: 13px;padding: 10px 0px 5px 0px;}
@@ -656,7 +734,7 @@ good-item dl.share-user-dl{width: 100%;text-align: center;zoom: 1;font-size: 12p
 
 
 /* ==========================================================================
-   商品分享页
+   商品分享页 share.html
    ========================================================================== */
 
 #main_myhome_L{width: 772px;border-right:1px solid #ccc;float: left;margin-top:10px;}
@@ -804,100 +882,6 @@ div.msgContainer{width: 100%;clear:both;font-size: 15px;text-align: center;line-
 .goodsItem244 .goodsFuncCon .theShadow p{position:relative;}
 
 
-/* 用户 登录   */
-
-.user_login_top{position: relative;float: right;width: 100%;text-align: center;}
-.user_login_floater{height: 50%;margin-bottom: -250px;position: relative;}
-.user_login_back{width: 450px;clear: both;padding-bottom: 10px;padding-right: 5px;position: relative;margin: 0 auto;text-align: right;}
-.user_login_back a{color: #444;text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);}
-#bgimg{position:absolute;z-index: -1;}
-.user_login_box{border-top: 3px #0095cd solid;height: 400px;width: 360px;clear: both;position: relative;margin: 0 auto;background-color: #fff;padding: 50px;-webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);-moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);}
-.user_login_box .title{color: #292929;height: 50px;margin-bottom: 20px;font-family:Microsoft Yahei;}
-.user_login_box .title .fl{font-size: 30px;}
-.user_login_box .title .fr{line-height: 50px;font-size: 18px;}
-.user_login_box .title .fr a{font-size: 18px;color: #FF4200;padding-left: 5px;font-family:Microsoft Yahei;}
-.user_login_box H3{font-weight: normal;font-size: 12px;}
-.user_login_box .logininput{padding-top: 20px;}
-.logininput input{display: block;height: 14px;line-height: 14px;width: 100%;border: #DAE2E5 1px solid;text-indent: 10px;overflow: hidden;color: #979696;padding-top: 13px;padding-bottom: 13px;margin-bottom: 10px;}
-.logininput input{-webkit-transition: all 0.2s ease-in;-moz-transition: all 0.2s ease-in;-o-transition: all 0.2s ease-in;transition: all 0.2s ease-in;}
-.logininput input:focus{border-color: #0095cd;}
-
-/* 登录按钮*/
-.loginbtn{border-bottom: 1px solid #ecf2f5;padding-bottom: 30px;}
-.loginsubmit input{width: 130px;height: 40px;line-height: 40px;color: #fff;background: #0095cd;display: block;text-align: center;font-size: 20px;border: none;font-family:Microsoft Yahei;cursor: pointer;}
-.loginsubmit{width: 130px;height: 40px;margin: 15px 20px 0 0;position: relative;}
-.loginbtn .logcheckbox{padding-top: 30px;}
-.loginbtn .logcheckbox input{vertical-align: middle;}
-.loginbtn .fr{padding-top: 30px;}
-
-/* 第三方登录*/
-.thirdlogin .pd50{padding-top: 30px;padding-bottom: 30px;}
-.thirdlogin h4{color: #6B6A6A;font-weight: 500;margin-bottom: 20px;}
-.thirdlogin ul li{display: block;float: left;margin-bottom: 10px;}
-.thirdlogin ul li a{display: block;float: left;height: 40px;line-height: 40px;width: 170px;color: #fff;text-indent: 60px;}
-#sinal a{background: #d63b22 url('../images/user_log_weibo.png') no-repeat 0px -5px;}
-#qql a{background: #3eb0d8 url('../images/user_log_qq.png') no-repeat 0px -5px;}
-.thirdlogin ul li{margin-right: 20px;}
-
-/* 用户 注册*/
-.user_reg_back{width: 960px;clear: both;padding-bottom: 10px;padding-right: 5px;position: relative;margin: 0 auto;text-align: right;}
-.user_reg_back a{color: #444;text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);}
-.user_reg_box{border-top: 3px #0095cd solid;height: 420px;width: 860px;clear: both;position: relative;margin: 0 auto;background-color: #fff;padding: 50px;-webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);-moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);}
-.user_reg_box .title{font-family: "arial", Microsoft Yahei;color: #292929;height: 50px;margin-bottom: 40px;}
-.user_reg_box .title .fl{font-size: 30px;}
-.user_reg_box .title .fr{line-height: 50px;font-size: 18px;}
-.user_reg_box .title .fr a{font-size: 18px;color: #FF4200;font-family: "arial", Microsoft Yahei;padding-left: 5px;}
-.user_reg_fl{}
-.thirdreg{float:right;text-align:left;width:170px;border-left: 1px solid #ecf2f5;padding-left:80px;height:320px;}
-.thirdreg .pd50{padding-bottom: 30px;}
-.thirdreg h4{color: #6B6A6A;font-weight: 500;margin-bottom: 20px;}
-.thirdreg ul li{display: block;float: left;margin-bottom: 10px;}
-.thirdreg ul li a{display: block;float: left;height: 40px;line-height: 40px;width: 170px;color: #fff;text-indent: 60px;}
-#sinal a{background: #d63b22 url('../img/css_img/user_log_weibo.png') no-repeat 0px -5px;}
-#qql a{background: #3eb0d8 url('../img/css_img/user_log_qq.png') no-repeat 0px -5px;}
-.thirdreg ul li{margin-right: 20px;}
-.reginput{}
-.reginput label{float: left;padding-top: 15px;text-align: right;font-size:14px;color:#999;}
-.user_reg_input_box{margin-left: 80px;}
-.reginput input{height: 14px;line-height: 14px;width: 280px;border: #DAE2E5 1px solid;text-indent: 10px;color: #979696;padding-top: 13px;padding-bottom: 13px;margin-bottom:10px;}
-.reginput input.code{width:100px;}
-.reginput input{-webkit-transition: all 0.2s ease-in;-moz-transition: all 0.2s ease-in;-o-transition: all 0.2s ease-in;transition: all 0.2s ease-in;}
-.reginput input:focus{border-color: #0095cd;}
-.regsubmit{width: 130px;height: 40px;margin: 15px 20px 0 80px;position: relative;}
-.regsubmit input{width: 130px;height: 40px;line-height: 40px;color: #fff;background: #0095cd;display: block;text-align: center;font-size: 20px;border: none;font-family: "arial", Microsoft Yahei;cursor: pointer;}
-#J_emailTip{padding: 10px 0 0 10px;}
-#J_passwordTip{padding: 10px 0 0 10px;}
-#J_repasswordTip{padding: 10px 0 0 10px;}
-#J_nickTip{padding: 10px 0 0 10px;}
-#J_logemailTip{float:right;}
-
-/*全屏背景*/
-#bg{position: fixed;top: 0;left: 0;}
-.bgwidth{width: 100%;}
-.bgheight{height: 100%;}
-
-/*会员帐号*/
-.user_center{width:1200px;margin:0 auto;}
-#umnav{height: 60px;}
-#umnav li{width: 150px;height: 60px;float: left;margin-right: 1px;}
-#umnav li a{display: block;background: #6e6f71;color: #fff;font-size: 18px;line-height: 60px;text-align: center;font-family: Microsoft Yahei, Arial;}
-#umnav li#umnactive a{background: #fff;color: #000}
-.umbody{width: 100%;height: auto;background: #fff}
-.pnitem{float: left;width: 100%;float: left;font-size: 14px;color: #757575;height: 60px;line-height: 60px;}
-.pnitem span{float: left;width: 130px;text-align: right;}
-.pnitem span font{margin-right: 15px;}
-.pnitem input, .pnitem textarea{width: 270px;height: 15px;margin-left:20px;padding-top: 12px;padding-bottom: 13px;margin-top:10px;padding-left:10px;margin-bottom: 10px;color: #383838;border: #DAE2E5 1px solid;font-size: 14px;font-family: Microsoft Yahei, Arial;float: left;-webkit-transition: all 0.2s ease-in;-moz-transition: all 0.2s ease-in;-o-transition: all 0.2s ease-in;transition: all 0.2s ease-in;}
-.pnitem input:focus, .pnitem textarea:focus{border-color: #0095cd;}
-.pnitem textarea{height: 80px;width: 400px;padding: 10px;text-indent: 0;line-height: 20px;resize: none}
-.pnline{height: 1px;width: 100%;border-bottom: #ecf2f5 1px solid;float: left;}
-.pnitem .post_check_info{position: relative;left: 0;float: left;margin-top: 10px;margin-left: 10px;}
-#pnsub{margin-left: 150px;margin-top: 30px;float: left;margin-bottom: 50px;}
-.subbtn{width: 130px;height: 40px;background: #0095cd;font-size: 22px;line-height: 34px;text-align: center;border: none;font-family: Microsoft Yahei, Arial;color: #fff}
-#J_edit_nickTip{margin-left:20px;text-align:left;}
-input.radio{width:20px;float:none;border:none;}
-.pnitem select{margin-left:20px;margin-top:20px;}
-
-
 
 
 /* ==========================================================================
@@ -908,67 +892,37 @@ input.radio{width:20px;float:none;border:none;}
  * Image replacement
  */
 
-.ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    /* IE 6/7 fallback */
-    *text-indent: -9999px;
+.ir {background-color: transparent;border: 0;overflow: hidden;
+/* IE 6/7 fallback */
+*text-indent: -9999px;
 }
 
-.ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 150%;
-}
+.ir:before {content: "";display: block;width: 0;height: 150%;}
 
 /*
  * Hide from both screenreaders and browsers: h5bp.com/u
  */
 
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
+.hidden {display: none !important;visibility: hidden;}
 
 /*
  * Hide only visually, but have it available for screenreaders: h5bp.com/v
  */
 
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
+.visuallyhidden {border: 0;clip: rect(0 0 0 0);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}
 
 /*
  * Extends the .visuallyhidden class to allow the element to be focusable
  * when navigated to via the keyboard: h5bp.com/p
  */
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
+.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus {clip: auto;height: auto;margin: 0;overflow: visible;position: static;width: auto;}
 
 /*
  * Hide visually and from screenreaders, but maintain layout
  */
 
-.invisible {
-    visibility: hidden;
-}
+.invisible {visibility: hidden;}
 
 /*
  * Clearfix: contain floats
@@ -982,32 +936,17 @@ input.radio{width:20px;float:none;border:none;}
  *    `:before` to contain the top-margins of child elements.
  */
 
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
+.clearfix:before,.clearfix:after {content: " "; /* 1 */display: table; /* 2 */}
 
-.clearfix:after {
-    clear: both;
-}
-.clear {
-clear: both;
-display: block;
-overflow: hidden;
-visibility: hidden;
-width: 0;
-height: 0;
-}
+.clearfix:after {clear: both;}
+.clear {clear: both;display: block;overflow: hidden;visibility: hidden;width: 0;height: 0;}
 
 /*
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
 
-.clearfix {
-    *zoom: 1;
-}
+.clearfix {*zoom: 1;}
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
