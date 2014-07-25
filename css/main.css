@@ -245,7 +245,7 @@ input.radio{width:20px;float:none;border:none;}
 .sidemenu-wrapper.on{position: fixed;top: 20px;}
 .sidemenu-wrapper{width: 100%;margin: auto;position: absolute;top: 137px;z-index: 881;}
 .sidemenu{width: 1000px;margin: auto;position: relative;color: #aaa;}
-.sidemenur{position: absolute;top: 0px;left: -50px;width: 63px;padding: 0px;}
+.sidemenur{position: absolute;top: 197px;left: -50px;width: 63px;padding: 0px;}
 .sidemenur ul{list-style-type: none;margin: 0;padding: 0;position: relative;width: 38px;display: block;}
 .sidemenur li.sm-menu{background: url('../img/css_img/iconsDeskV3.png') no-repeat -389px -297px #000;width: 38px;height: 38px;}
 .sidemenur li.sm-top{border-bottom: none;background-position: -388px -531px;background-image: url('../img/css_img/iconsDeskV3.png');cursor: pointer;position: absolute;bottom: -40px;left: 0px;}
