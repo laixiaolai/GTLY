@@ -1,3 +1,106 @@
+//仿淘宝首页轮播
+function scroll_s(wrapId,wrapUl,sprev,snext){
+    var container=document.getElementById(wrapId);
+    var list=document.getElementById(wrapUl);
+    //var buttons=document.getElementById('buttons').getElementsByTagName('li');
+    var prev=document.getElementById(sprev);
+    var next=document.getElementById(snext);
+    var index=1;
+    var animated=false;
+    var timer=null;
+
+    /*function showButton(){
+        for (var i =0;i< buttons.length; i++) {
+            if(buttons[i].className=='on'){
+                buttons[i].className='';
+                break;
+            }
+        };
+        buttons[index-1].className='on';
+    }*/
+
+    function animate(offset){
+        animated=true;
+        var newLeft=parseInt(list.style.left)+offset;
+        var time=300;//位移总时间
+        var interval=300;//位移间隔时间
+        var speed=parseInt(offset/(time/interval));//每次位移量
+
+        function go(){
+            if((speed<0&&parseInt(list.style.left)>newLeft)||(speed>0&&parseInt(list.style.left)<newLeft)){
+                list.style.left=parseInt(list.style.left)+speed+'px';                   
+                setTimeout(go,interval);
+            }
+            else{
+                animated=false;
+                list.style.left=newLeft+'px';
+                if(newLeft>-239){
+                    list.style.left=-956+'px';
+                }
+                if(newLeft<-956){
+                    list.style.left=-239+'px';
+                }
+            }
+        }
+        go();
+    }
+    
+    function play(){
+        timer=setInterval(function(){next.onclick();},3000);
+    }
+    function stop(){
+        clearInterval(timer);
+    }
+
+    prev.onclick=function(){
+        if (index==1) {
+            index=4;
+        }
+        else{
+            index-=1;
+        }           
+        //showButton();
+        if(!animated){
+            animate(239);
+        }
+    }
+    next.onclick=function(){
+
+        if(index==4){
+            index=1;
+        }
+        else{
+            index+=1;
+        }
+        //showButton();
+        if(!animated){
+            animate(-239);
+        }
+        
+    }
+    
+
+    /*for(var i=0;i<buttons.length;i++){
+        buttons[i].onclick=function(){
+            if(this.className=='on'){
+                return;
+            }
+            var myIndex=parseInt(this.getAttribute('index'));
+            var offset=(myIndex-index)*-600;
+            if(!animated){
+                animate(offset);
+            }
+            index=myIndex;
+            showButton();
+        }
+    }*/
+    
+    container.onmouseover=stop;
+    container.onmouseout=play;
+    play();
+};
+
+
 
 /*获取非行间样式*/
 function getStyle(obj,name){

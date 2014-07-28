@@ -362,7 +362,6 @@ sV2-timebox p{font-size: 14px;padding-top: 65px;padding-right: 10px;}
 .blue,.blue a{color: #32a4d2;color: #32a4d2!important;}
 strong, b{font-weight: bold;}
 .sV2-timebox p{font-size: 14px;padding-top: 65px;padding-right: 10px;}
-.today-saleV2 div.boxes{padding: 0px;float: left;margin-left: 10px;margin-bottom: 10px;background: #eeeeee;}
 .saleV2{position: relative;height: 295px;overflow: hidden;}
 .saleV2, .saleV2 img{width: 485px;}
 .saleV2 a{display: block; color:#333;}
@@ -373,8 +372,11 @@ strong, b{font-weight: bold;}
 .sV2-t1{display: block;line-height: 40px;padding: 0 10px;font-size: 14px;font-weight: bold;float: left;position: relative;}
 .sV2-t1:after{content: "";position: absolute;display: block;right: 0px;top: 12px;height: 16px;width: 1px;background-color: #333;}
 .sale-price{font-size: 14px;font-weight: bold;float: right;line-height: 40px;padding-right: 10px;}
-.today-saleV2 div.boxes{padding: 0px;float: left;margin-left: 10px;margin-bottom: 10px;background: #eeeeee;}
 .buying-tipV2{width: 239px;height: 295px;overflow: hidden;position: relative;}
+.buying-tipV2 .flex-viewport{position: relative;}
+.buying-tipV2 .flex-viewport .slides{ position:absolute;width: 1434px;-webkit-transition: 0.6s;transition: 0.6s;}
+.buying-tipV2 .slides li{width: 239px;float: left;display: block;}
+
 .today-saleV2 .flex-direction-nav li a{height: 48px;margin-top: -24px;}
 .flex-direction-nav li a{display: block;width: 24px;top: 50%;margin-top: -40px;height: 79px;background-image: url(../img/css_img/iconsDeskV3.png);background-repeat: no-repeat;position: absolute;overflow: hidden;line-height: 1000;background-color: #eee;-moz-transition: all 0.3s ease-in-out;-webkit-transition: all 0.3s ease-in-out;-ms-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease 0s;transition: all 0.3s ease-in-out;}
 .today-saleV2 .flex-prev{background-position: -325px -734px;}

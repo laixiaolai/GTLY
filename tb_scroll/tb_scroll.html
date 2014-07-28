@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>淘宝轮播</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css">
+	*{padding: 0;margin: 0;border: none;text-decoration: none; list-style: none;}
+	body{padding: 20px;}
+	#container{width: 600px;height: 375px;margin:0 auto;position: relative;overflow: hidden;}
+	#list{width: 4200px;height: 375px;position: absolute;z-index: 1;}
+	#list img{float: left;width: 600px;}
+	#buttons{position: absolute;height: 12px;width: 100px; display:block;z-index: 2;bottom: 20px;left: 250px;}
+	#buttons li{cursor: pointer;float: left; display:block;border: 1px solid #fff;width: 10px;height: 10px;border-radius: 6px; margin-right: 3px;background: #444;}
+	#buttons .on{background: orangered;}
+	.arrow{cursor: pointer;display: none; color:#FFF;line-height: 39px;text-align: center;font-size: 36px;font-weight: bold;width: 40px; height: 40px;position: absolute;z-index: 2;top: 160px;background-color: rgba(0,0,0,.3);}
+	.arrow:hover{background-color:rgba(0,0,0,.7); }
+	#container:hover .arrow{display: block;}
+	#prev{left: 20px;}
+	#next{right: 20px;}
+
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		var container=document.getElementById('container');
+		var list=document.getElementById('list');
+		var buttons=document.getElementById('buttons').getElementsByTagName('li');
+		var prev=document.getElementById('prev');
+		var next=document.getElementById('next');
+		var index=1;
+		var animated=false;
+		var timer=null;
+
+		function showButton(){
+			for (var i =0;i< buttons.length; i++) {
+				if(buttons[i].className=='on'){
+					buttons[i].className='';
+					break;
+				}
+			};
+			buttons[index-1].className='on';
+		}
+
+		function animate(offset){
+			animated=true;
+			var newLeft=parseInt(list.style.left)+offset;
+			var time=300;//位移总时间
+			var interval=10;//位移间隔时间
+			var speed=offset/(time/interval);//每次位移量
+
+			function go(){
+				if((speed<0&&parseInt(list.style.left)>newLeft)||(speed>0&&parseInt(list.style.left)<newLeft)){
+					list.style.left=parseInt(list.style.left)+speed+'px';					
+					setTimeout(go,interval);
+				}
+				else{
+					animated=false;
+					list.style.left=newLeft+'px';
+					if(newLeft>-600){
+						list.style.left=-3000+'px';
+					}
+					if(newLeft<-3000){
+						list.style.left=-600+'px';
+					}
+				}
+			}
+			go();
+		}
+		
+		function play(){
+			timer=setInterval(function(){next.onclick();},3000);
+		}
+		function stop(){
+			clearInterval(timer);
+		}
+
+		next.onclick=function(){
+			if(index==5){
+				index=1;
+			}
+			else{
+				index+=1;
+			}
+			showButton();
+			if(!animated){
+				animate(-600);
+			}
+			
+		}
+		prev.onclick=function(){
+			if (index==1) {
+				index=5;
+			}
+			else{
+				index-=1;
+			}			
+			showButton();
+			if(!animated){
+				animate(600);
+			}
+		}
+
+		for(var	i=0;i<buttons.length;i++){
+			buttons[i].onclick=function(){
+				if(this.className=='on'){
+					return;
+				}
+				var myIndex=parseInt(this.getAttribute('index'));
+				var offset=(myIndex-index)*-600;
+				if(!animated){
+					animate(offset);
+				}
+				index=myIndex;
+				showButton();
+			}
+		}
+		
+		container.onmouseover=stop;
+		container.onmouseout=play;
+		play();
+	}
+</script>
+</head>
+<body>
+	<div id="container">
+		<div id="list" style="left:-600px;">
+			<img src="5.jpg" alt="">
+			<img src="1.jpg" alt="">
+			<img src="2.jpg" alt="">
+			<img src="3.jpg" alt="">
+			<img src="4.jpg" alt="">
+			<img src="5.jpg" alt="">
+			<img src="1.jpg" alt="">
+		</div>
+		<ul id="buttons">
+			<li class="on" index="1"></li>
+			<li index="2"></li>
+			<li index="3"></li>
+			<li index="4"></li>
+			<li index="5"></li>
+		</ul>
+		<a href="javascript:;" class="arrow" id="prev">&lt;</a>
+		<a href="javascript:;" class="arrow" id="next">&gt;</a>
+	</div>    
+</body>
+</html>
