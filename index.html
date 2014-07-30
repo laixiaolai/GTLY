@@ -13,6 +13,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/reg_log.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <script type="text/javascript">
             window.onload=function(){
@@ -39,7 +40,7 @@
                             	<form>
                                 	<input type="text" name="search" class="search_inp" placeholder="搜索" /><input type="submit" value="" class="search_btn" />                	</form>
                              </li>
-                            <li class="user"><a href="#" target="_blank"><img src="img/user_head.jpg" />&nbsp;钢铁老爷</a></li>
+                            <li class="user"><a href="javascript:;" id="log_ac"><img src="img/user_head.jpg" />&nbsp;钢铁老爷</a></li>
                             <li class="icons"><a href="#" class="mob">&nbsp;</a><a href="#" class="share">&nbsp;</a><a href="#" class="cart">&nbsp;</a></li>
                             <li class="main_nav"><a href="#" target="_blank">首页</a><a href="#" target="_blank">逛逛</a><a href="#" target="_blank">出售</a><a href="#" target="_blank">帮助</a><a href="#" target="_blank">意见反馈</a></li>
                         </ul>
@@ -474,15 +475,14 @@
                     </div>
                 </div>
             </div>
-            
-            
+               
             <!-- //  首页礼物商店结束 -->
             
 			            
             <!-- //==============================================================================
     神奇的分割线
 ================================================================================= -->
-			<!-- //  首页左边导航结束 -->
+			<!-- //  首页左边导航开始 -->
             <div class="sidemenu-wrapper on">
                 <div class="sidemenu">
                     <div id="sidemenu" class="sidemenur">
@@ -584,13 +584,165 @@
             </div>
         </div>
 		<!--页尾结束-->
+        
+
+        <!--登陆注册弹出层开始-->
+        <!--半透明遮罩层开始-->
+        <div id="pop_bg"></div>
+        <!--半透明遮罩层结束-->
+        <!--注册框开始-->
+        <div class="UserRegisterPageBase Module UserRegisterPage" id="reg_box">
+            <div class="contents">
+                <div class="UserRegisterBase UserRegister Module">
+                    <form class="loginForm" method="post">
+                        <a href="#" type="button" class="Button borderless closeModal Module NavigateButton" id="reg_clos_btn">
+                            <em></em>&nbsp;</a>
+                        <h1>Sign up with Email</h1>
+                        <ul>
+                            <li class="firstName">
+                                <input type="text" class="name first hasError" name="first_name" id="userFirstName" placeholder="First Name" value="" autofocus="">
+                                <p class="formErrorMessage">Required</p>
+                            </li>
+                            <li class="lastName">
+                                <input type="text" class="name last" name="last_name" id="userLastName"
+                                placeholder="Last Name" value="">
+                            </li>
+                            <li class="emailField">
+                                <input type="email" class="email" name="email" id="userEmail" placeholder="Email Address" value="">
+                            </li>
+                            <li class="passwordField">
+                                <input type="password" name="password" id="userPassword" placeholder="Password" value="">
+                            </li>
+                            <li class="genderFormItem ">
+                                <div class="formInputWrapper">
+                                    <div class="fieldsetWrapper">
+                                        <fieldset class="formInlineCheckedSet">
+                                            <ul>
+                                                <li>
+                                                    <label>
+                                                        <input name="gender" type="radio" value="female">
+                                                        <span class="gender">Female</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input name="gender" type="radio" value="male">
+                                                        <span class="gender">Male</span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </li>
+                            <h3>
+                            </h3>
+                            <li class="businessSignupWrapper">
+                                <p>
+                                    Are you a business?
+                                    <a href="#">Click Here</a>
+                                </p>
+                            </li>
+                            <li class="termsTextCheckboxWrapper">
+                                <p>
+                                    By creating an account, I accept Pinterest's
+                                    <a href="#">Terms of Service</a>and<a href="#">Privacy Policy</a>.
+                                </p>
+                            </li>
+                        </ul>
+                        <div class="formFooter">
+                            <div class="formFooterButtons">
+                                <a href="#" type="button" class="rounded NavigateButton Button Module large hasText cancel btn">
+                                    <span class="buttonText">Cancel</span>
+                                </a>
+                                <button type="submit" class="rounded Button primary Module large hasText btn signup disabled" disabled="">
+                                    <span class="buttonText">Sign up</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--注册框结束-->
+        <!--登陆框开始-->
+        <div class="LoginPage LoginPageBase Module" id="log_box">
+            <div class="contents">
+                <div class="LoginBase Login Module">
+                    <form class="loginForm" method="post">
+                        <h1>Log In to Pinterest</h1>
+                        <button type="button" class="Button borderless closeModal Module NavigateButton">
+                            <em></em>&nbsp;
+                        </button>
+                        <div class="socialLogin">
+                            <button data-gapiattached="true" type="button" class="rounded unAuthGplusConnect unAuth registerLoginButton Button Button GplusConnectButton Module large hasText btn">
+                                <em></em>
+                                <span class="buttonText">Log In with Google</span>
+                            </button>
+                            <button type="button" class="rounded unAuthTwitterConnect registerLoginButton Button Module large hasText btn">
+                                <em></em>
+                                <span class="buttonText">Log In with Twitter</span>
+                            </button>
+                        </div>
+                        <ul class="userLogin">
+                            <li class="loginUsername">
+                                <input autofocus="" class="email hasError" name="username_or_email" placeholder="Email" autocomplete="on" type="email">
+                                <p class="formErrorMessage">Required</p>
+                            </li>
+                            <li class="loginPassword">
+                                <input name="password" placeholder="Password" type="password">
+                            </li>
+                        </ul>
+                        <div class="businessHint">
+                            Are you a business?
+                            <a href="#" target="_blank">Get started here</a>
+                        </div>
+                        <div class="loginError">
+                        </div>
+                        <div class="formFooter">
+                            <div class="formFooterButtons">
+                                <button disabled="disabled" type="submit" class="rounded Button primary Module large hasText btn disabled">
+                                    <span class="buttonText">Log In</span>
+                                </button>
+                            </div>
+                            <a href="#" class="forgotPassword">Forgot your password?</a>
+                            <br>
+                            <a href="#">Sign up now</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--登陆框结束-->
+        
 
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-        <script>
+        <script type="text/javascript">
+        (function(){
+            var log_ac=document.getElementById('log_ac');
+            var pop_bg=document.getElementById('pop_bg');
+            var reg_box=document.getElementById('reg_box');
+            var reg_clos_btn=document.getElementById('reg_clos_btn');
+            var height=document.documentElement.scrollHeight||document.body.scrollHeight;
+            var cHeight=document.documentElement.clientHeight||document.body.clientHeight;
+            var cWidth=document.documentElement.clientWidth||document.body.clientWidth;
+            //console.log(oTop);
+            log_ac.onclick=function(){
+                pop_bg.style.cssText="display:block;height:"+height+"px";
+                reg_box.style.cssText="display:block;position:fixed;";
+                var oTop=parseInt((cHeight-reg_box.offsetHeight)/2);
+                var oLeft=parseInt((cWidth-reg_box.offsetWidth)/2);
+                reg_box.style.top=oTop+"px";
+                reg_box.style.left=oLeft+"px";
+            }
+            pop_bg.onclick=reg_clos_btn.onclick=function(){
+                reg_box.style.cssText="display:none";
+                pop_bg.style.display="none";
+            }
 
+        })();
         </script>
-        
     </body>
 </html>

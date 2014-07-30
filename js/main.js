@@ -101,7 +101,6 @@ function scroll_s(wrapId,wrapUl,sprev,snext){
 };
 
 
-
 /*获取非行间样式*/
 function getStyle(obj,name){
     if(obj.currentStyle){
@@ -364,22 +363,7 @@ $(function() {
     $(".list_grid_1").showSlide();
     
     
-    // 返回顶部 
-    $(window).scroll(function() {
-        0 < $(window).scrollTop() ? ($("#footer_side").css({
-            bottom: 30
-        }), $("#backtop").click(function() {
-            if (!$("html,body").is(":animated")) return $("html,body").animate({
-                scrollTop: 0
-            },
-            500),
-            !1
-        })) : $("#footer_side").css({
-            bottom: -250
-        })
-    });
-    
-    
+  
     
     //搜索
     if (document.getElementById("search_class_emu")) {
@@ -405,7 +389,7 @@ $(function() {
     
     
     
-    //用户_登录_输入款_焦点
+    //用户_登录_输入框_焦点
     $.fn.placeholder = function() {
         var a = $(this),
         b = a.val();
@@ -501,3 +485,325 @@ function del_ff(elem){
         }
     }
 }
+
+
+
+// JavaScript Document
+
+//兼容获取非行间样式
+function getStyle(obj,attr)
+{
+    if(obj.currentStyle)
+    {
+        return obj.currentStyle[attr];
+    }
+    else
+    {
+        return getComputedStyle(obj,false)[attr];
+    }
+}
+
+//用class选元素
+function getByClass(oParent, sClass)
+{
+    //1.所有的选出来
+    var aEle=oParent.getElementsByTagName('*');
+    var arr=[];
+    
+    //2.筛选——选中塞进arr
+    for(var i=0;i<aEle.length;i++)
+    {
+        if(aEle[i].className==sClass)
+        {
+            arr.push(aEle[i]);
+        }
+    }
+    
+    //3.把所有的返回出去
+    return arr;
+}
+
+/*问答人选项卡***注意有调用getByClass函数***/
+function tab(id)
+        {
+            var aHd=getByClass(id, 'hd');
+            var aBd=getByClass(id, 'bd');
+            var aBtn=aHd[0].getElementsByTagName('li');
+            var aUl=aBd[0].getElementsByTagName('ul');
+            
+            for(var i=0;i<aBtn.length;i++)
+            {
+                aBtn[i].index=i;
+                aBtn[i].onclick=function ()
+                {
+                    for(var i=0;i<aBtn.length;i++)
+                    {
+                        aBtn[i].className='';
+                        aUl[i].style.display='none';
+                    }
+                    this.className='selected';
+                    aUl[this.index].style.display='block';
+                };
+            }
+        }
+
+//事件绑定
+function addEvent(obj, sEv, fn)
+{
+    if(obj.attachEvent)
+    {
+        obj.attachEvent('on'+sEv, fn);
+    }
+    else
+    {
+        obj.addEventListener(sEv, fn, false);
+    }
+}
+
+
+//表单验证
+function checkForm(oForm, fnCheck)
+{
+    var aInput=oForm.getElementsByTagName('input');
+    
+    //onblur——有name就校验
+    for(var i=0;i<aInput.length;i++)
+    {
+        if(aInput[i].name)  //需要校验
+        {
+            aInput[i].onblur=function ()
+            {
+                check(this);
+            };
+            /*(function (oTxt){
+                setInterval(function (){
+                    check(oTxt);
+                }, 50);
+            })(aInput[i]);*/
+        }
+    }
+    
+    //onsubmit——有name就校验
+    oForm.onsubmit=function ()
+    {
+        var result=true;
+        
+        for(var i=0;i<aInput.length;i++)
+        {
+            if(aInput[i].name)
+            {
+                if(!check(aInput[i]))
+                {
+                    result=false;
+                }
+            }
+        }
+        
+        return result;
+    };
+    
+    //公共校验函数
+    function check(oTxt)
+    {
+        var s=oTxt.getAttribute('re');
+        var re=new RegExp('^'+s+'$', 'i');
+        var oMsg=oTxt.parentNode.children[2];
+        
+        //第一关
+        if(re.test(oTxt.value))
+        {
+            //对了
+            if(fnCheck)
+            {
+                //第二关
+                if(fnCheck(oTxt))
+                {
+                    oTxt.className='correct';
+                    oMsg.style.display='none';
+                    return true;
+                }
+                else
+                {
+                    oTxt.className='error';
+                    oMsg.style.display='inline-block';
+                    
+                    return false;
+                }
+            }
+            else
+            {
+                oTxt.className='correct';
+                oMsg.style.display='none';
+                return true;
+            }
+        }
+        else
+        {
+            oTxt.className='error';
+            oMsg.style.display='inline-block';
+            
+            return false;
+        }
+    }
+}
+
+
+//判断是否有输入参数值
+function checknull_val(formObjId)
+{
+    var thenull=false;
+    var argc = arguments.length;
+    for(var i=1;i<=argc;i++)
+    {
+        if(i%2==1)
+        {
+            if(document.getElementById(arguments[i]))
+            {
+                var theObj=document.getElementById(arguments[i]);
+                if(theObj.value=="")
+                {
+                    if(arguments[i+1])
+                    {
+                        alert(arguments[i+1]);
+                        thenull=true;
+                        break;
+                    }
+                }
+            }
+        }
+    }
+    if(thenull)
+    {
+        return;
+    }
+    else
+    {
+        var formObj=document.getElementById(formObjId);
+        formObj.submit();
+    }
+}
+
+
+function checkbox(ck_all_id, wrap_tag_id) {
+    var oCk = document.getElementById(ck_all_id);
+    var oDiv = document.getElementById(wrap_tag_id);
+    var aInp = oDiv.getElementsByTagName('input');
+    var aCks = [];
+    for (var j = 0; j < aInp.length; j++) {
+        if (aInp[j].type == 'checkbox') {
+            aCks.push(aInp[j]);
+        }
+    }
+    oCk.onclick = function() {
+        for (var i = 0; i < aCks.length; i++) {
+            aCks[i].checked = oCk.checked;
+        }
+    };
+
+    for (var i = 0; i < aCks.length; i++) {
+        aCks[i].onclick = function() {
+            var count = 0;
+            for (var i = 0; i < aInp.length; i++) {
+                if (aCks[i].checked == true) {
+                    count++;
+                }
+            }
+            if (aCks.length == count) {
+                oCk.checked = true;
+            } else {
+                oCk.checked = false;
+            }
+        };
+    }
+};
+
+
+function treeNodeChange(parentId, hidTypeId) {
+    var oDiv = document.getElementById(parentId);
+    var oHInp = document.getElementById(hidTypeId);
+    var typeId = oHInp.value;
+    var aTree_a = oDiv.getElementsByTagName('a');
+    for (var i = 0; i < aTree_a.length; i++) {
+        if (typeId == aTree_a[i].attributes["typeid"].value) {
+            aTree_a[i].className = 'cur';
+            var a_lv = aTree_a[i].attributes["level"].value;
+
+            switch (a_lv) {
+                case '1':
+                    if (aTree_a[i].parentNode.parentNode.childNodes.length > 1) {
+                        aTree_a[i].parentNode.parentNode.childNodes[1].style.display = 'block';
+                        aTree_a[i].parentNode.childNodes[0].className = 'active';
+                    }
+                    break;
+                case '2':
+                    aTree_a[i].parentNode.parentNode.parentNode.style.display = "block";
+                    if (aTree_a[i].parentNode.parentNode.childNodes.length > 1) {
+                        aTree_a[i].parentNode.parentNode.childNodes[1].style.display = 'block';
+                    }
+                    aTree_a[i].parentNode.parentNode.parentNode.parentNode.childNodes[0].childNodes[0].className = 'active';
+                    break;
+                case '3':
+                    var dd = aTree_a[i].parentNode.parentNode.parentNode;
+                    dd.style.display = 'block';
+                    var listTwo = dd.parentNode.parentNode;
+                    listTwo.style.display = 'block';
+                    if (listTwo.parentNode.childNodes[0].childNodes[0]) {
+                        listTwo.parentNode.childNodes[0].childNodes[0].className = 'active';
+                    }
+                    break;
+                case '4':
+                    var pLi = aTree_a[i].parentNode.parentNode.parentNode.parentNode.parentNode;
+                    pLi.parentNode.parentNode.style.display = 'block';
+                    //pLi.className = 'selected';
+                    pLi.childNodes[0].className = 'cur';
+                    var olistTwo = pLi.parentNode.parentNode.parentNode.parentNode;
+                    olistTwo.style.display = 'block';
+                    if (olistTwo.parentNode.childNodes[0].childNodes[0]) {
+                        olistTwo.parentNode.childNodes[0].childNodes[0].className = 'active';
+                    }
+                    break;
+                
+            }
+
+        }
+        ;
+
+    }
+    ;
+};
+
+//返回顶部
+function backTop(bTopId) {
+    var oBtn = document.getElementById(bTopId);
+    var osTop = document.body.scrollTop || document.documentElement.scrollTop;
+    var timer = null;
+    var isTop = true;
+    var oClientH = document.documentElement.clientHeight;
+    window.onscroll = function () {
+        var osTop = document.body.scrollTop || document.documentElement.scrollTop;
+        if (osTop >= oClientH) {
+            oBtn.style.display = 'block';
+        }
+        else {
+            oBtn.style.display = 'none';
+        }
+        if (!isTop) {
+            clearInterval(timer);
+        }
+        isTop = false;
+    }
+
+    oBtn.onclick = function () {
+        timer = setInterval(function () {
+            osTop = document.body.scrollTop || document.documentElement.scrollTop;
+            var iSpeed = Math.floor(-osTop / 6);
+
+            document.body.scrollTop = document.documentElement.scrollTop = osTop + iSpeed;
+            if (osTop == 0) {
+                clearInterval(timer);
+            }
+            isTop = true;
+        }, 30);
+    }
+}
+
