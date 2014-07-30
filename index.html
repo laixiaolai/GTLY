@@ -19,8 +19,8 @@
             window.onload=function(){
                 scroll('J_banner','slides','nd-control-nav','nd-prev','nd-next','nd-active');
                 scroll_s('flex-viewport','s_slides','flex-prev','flex-next');
-
             }
+
         </script>
     </head>
     <body>
@@ -40,9 +40,9 @@
                             	<form>
                                 	<input type="text" name="search" class="search_inp" placeholder="搜索" /><input type="submit" value="" class="search_btn" />                	</form>
                              </li>
-                            <li class="user"><a href="javascript:;" id="log_ac"><img src="img/user_head.jpg" />&nbsp;钢铁老爷</a></li>
+                            <li class="user"><a href="javascript:;" id="reg_ac"><img src="img/user_head.jpg" />&nbsp;钢铁老爷</a></li>
                             <li class="icons"><a href="#" class="mob">&nbsp;</a><a href="#" class="share">&nbsp;</a><a href="#" class="cart">&nbsp;</a></li>
-                            <li class="main_nav"><a href="#" target="_blank">首页</a><a href="#" target="_blank">逛逛</a><a href="#" target="_blank">出售</a><a href="#" target="_blank">帮助</a><a href="#" target="_blank">意见反馈</a></li>
+                            <li class="main_nav"><a href="#" target="_blank">首页</a><a href="#" target="_blank">逛逛</a><a href="#" target="_blank">出售</a><a href="#" target="_blank">帮助</a><a href="javascript:;" id="log_ac">意见反馈</a></li>
                         </ul>
                     </div>
                 </div>
@@ -671,7 +671,7 @@
                 <div class="LoginBase Login Module">
                     <form class="loginForm" method="post">
                         <h1>Log In to Pinterest</h1>
-                        <button type="button" class="Button borderless closeModal Module NavigateButton">
+                        <button type="button" class="Button borderless closeModal Module NavigateButton" id="log_clos_btn">
                             <em></em>&nbsp;
                         </button>
                         <div class="socialLogin">
@@ -720,29 +720,8 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         <script type="text/javascript">
-        (function(){
-            var log_ac=document.getElementById('log_ac');
-            var pop_bg=document.getElementById('pop_bg');
-            var reg_box=document.getElementById('reg_box');
-            var reg_clos_btn=document.getElementById('reg_clos_btn');
-            var height=document.documentElement.scrollHeight||document.body.scrollHeight;
-            var cHeight=document.documentElement.clientHeight||document.body.clientHeight;
-            var cWidth=document.documentElement.clientWidth||document.body.clientWidth;
-            //console.log(oTop);
-            log_ac.onclick=function(){
-                pop_bg.style.cssText="display:block;height:"+height+"px";
-                reg_box.style.cssText="display:block;position:fixed;";
-                var oTop=parseInt((cHeight-reg_box.offsetHeight)/2);
-                var oLeft=parseInt((cWidth-reg_box.offsetWidth)/2);
-                reg_box.style.top=oTop+"px";
-                reg_box.style.left=oLeft+"px";
-            }
-            pop_bg.onclick=reg_clos_btn.onclick=function(){
-                reg_box.style.cssText="display:none";
-                pop_bg.style.display="none";
-            }
-
-        })();
+                pop_box('reg_ac','pop_bg','reg_box','reg_clos_btn');
+                pop_box('log_ac','pop_bg','log_box','log_clos_btn');
         </script>
     </body>
 </html>
