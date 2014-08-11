@@ -13,8 +13,10 @@ function getStyle(obj,attr){
 };
 
 //用class选元素（第二个参数可选）
-function getByClass(clsName, oParent){
-    var parent=document.getElementById(oParent)||document;
+
+function getByClass(clsName, parent){
+    //判断是否有父元素这个参数传进来
+    var oParent=parent?document.getElementById(parent):document;
     //1.所有的选出来
     var aEle=oParent.getElementsByTagName('*');
     var arr=[];
@@ -69,6 +71,76 @@ function bind(el,eventType,callback){
         el.attachEvent('on'+eventType,callback);
     }
 }
+
+//跨浏览器事件处理程序
+var eventUtil={
+    //添加句柄
+    addHandler:function(el,type,handler){
+        if(el.addEventListener)//DOM2级 兼容非IE
+        {
+            el.addEventListener(type,handler,false);
+        }
+        else if(el.attachEvent)//DOM2级 兼容IE系列及Oprea
+        {
+            el.attachEvent('on'+type,handler);
+        }
+        else//DOM 0级 兼容不支持DOM2级事件的老浏览器
+        {
+            el['on'+type]=handler;
+        }
+    },
+    //删除句柄
+    removeHandle:function(el,type,handler){
+        if(el.removeEventListener)//DOM2级 兼容非IE
+        {
+            el.removeEventListener(type,handler,false);
+        }
+        else if(el.detachEvent)//DOM2级 兼容IE系列及Oprea
+        {
+            el.detachEvent('on'+type,handler);
+        }
+        else//DOM 0级 兼容不支持DOM2级事件的老浏览器
+        {
+            el['on'+type]=null;
+        }
+    },
+    //获取事件对象
+    getEvent:function(event){
+        return event?event:window.event;
+    },
+    //获取事件类型
+    getType:function(event){
+        return event.type;
+    },
+    //获取触发事件的元素
+    getElement:function(event){
+        return event.target||event.srcElement;
+    },
+    //阻止事件的默认行为
+    preventDefault:function(event){
+        if(event.preventDefault){
+            event.preventDefault();
+        }
+        else{
+            event.returnValue=false;
+        }
+    },
+    //阻止事件冒泡
+    stopPropagation:function(event){
+        if(event.stopPropagation){
+            event.stopPropagation();
+        }
+        else{
+            event.cancelBubble=true;
+        }
+    }
+
+
+
+
+
+
+};
 
 //弹出窗口
 function pop_box(trigger,popBg,popBox,closeBtn){

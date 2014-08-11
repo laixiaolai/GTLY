@@ -588,9 +588,9 @@
 
         <!--登陆注册弹出层开始-->
         <!--半透明遮罩层开始-->
-        <div id="pop_bg"></div>
+        
         <!--半透明遮罩层结束-->
-        <!--注册框开始-->
+        <!--注册框开始--><div id="reg_pop_bg"></div>
         <div class="UserRegisterPageBase Module UserRegisterPage" id="reg_box">
             <div class="contents">
                 <div class="UserRegisterBase UserRegister Module">
@@ -665,7 +665,7 @@
             </div>
         </div>
         <!--注册框结束-->
-        <!--登陆框开始-->
+        <!--登陆框开始--><div id="log_pop_bg"></div>
         <div class="LoginPage LoginPageBase Module" id="log_box">
             <div class="contents">
                 <div class="LoginBase Login Module">
@@ -720,8 +720,9 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         <script type="text/javascript">
-                pop_box('reg_ac','pop_bg','reg_box','reg_clos_btn');
-                pop_box('log_ac','pop_bg','log_box','log_clos_btn');
+                pop_box('reg_ac','reg_pop_bg','reg_box','reg_clos_btn');
+                pop_box('log_ac','log_pop_bg','log_box','log_clos_btn');
+                
         </script>
     </body>
 </html>
