@@ -12,8 +12,9 @@ function getStyle(obj,attr){
     }
 };
 
-//用class选元素
-function getByClass(oParent, sClass){
+//用class选元素（第二个参数可选）
+function getByClass(clsName, oParent){
+    var parent=document.getElementById(oParent)||document;
     //1.所有的选出来
     var aEle=oParent.getElementsByTagName('*');
     var arr=[];
@@ -21,7 +22,7 @@ function getByClass(oParent, sClass){
     //2.筛选——选中塞进arr
     for(var i=0;i<aEle.length;i++)
     {
-        if(aEle[i].className==sClass)
+        if(aEle[i].className==clsName)
         {
             arr.push(aEle[i]);
         }
