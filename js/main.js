@@ -202,11 +202,11 @@ function startMove(obj,attr,iTarget){
 /*首页大图轮播*/
 function scroll(oParent,obig,osmall,prev,next,actived){
     var oDiv=document.getElementById(oParent);
-    var oBtnPrev=getByClass(oDiv,prev)[0];
-    var oBtnNext=getByClass(oDiv,next)[0];
-    var oSmall=getByClass(oDiv,osmall)[0];  
+    var oBtnPrev=getByClass(prev,oParent)[0];
+    var oBtnNext=getByClass(next,oParent)[0];
+    var oSmall=getByClass(osmall,oParent)[0];  
     var aLiSmall=oSmall.getElementsByTagName('li');
-    var oUlBig=getByClass(oDiv,obig)[0];
+    var oUlBig=getByClass(obig,oParent)[0];
     var aLiBig=oUlBig.getElementsByTagName('li');
     var nowZIndex=2;
     var now=0;
