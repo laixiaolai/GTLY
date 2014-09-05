@@ -19,6 +19,7 @@ function getByClass(clsName, parent){
     var oParent=parent?document.getElementById(parent):document;
     //1.所有的选出来
     var aEle=oParent.getElementsByTagName('*');
+
     var arr=[];
     
     //2.筛选——选中塞进arr
@@ -134,11 +135,6 @@ var eventUtil={
             event.cancelBubble=true;
         }
     }
-
-
-
-
-
 
 };
 
@@ -450,35 +446,6 @@ function scroll_s(wrapId,wrapUl,sprev,snext){
 
 
 
-
-
-
-
-
-
-/*问答人选项卡***注意有调用getByClass函数***/
-function tab(id)
-{
-    var aHd=getByClass(id, 'hd');
-    var aBd=getByClass(id, 'bd');
-    var aBtn=aHd[0].getElementsByTagName('li');
-    var aUl=aBd[0].getElementsByTagName('ul');
-    
-    for(var i=0;i<aBtn.length;i++)
-    {
-        aBtn[i].index=i;
-        aBtn[i].onclick=function ()
-        {
-            for(var i=0;i<aBtn.length;i++)
-            {
-                aBtn[i].className='';
-                aUl[i].style.display='none';
-            }
-            this.className='selected';
-            aUl[this.index].style.display='block';
-        };
-    };
-};
 
 
 
